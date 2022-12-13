@@ -1,0 +1,248 @@
+.banner {
+  background-color: rgb(220 231 231 / 32%);
+  height: 350px;
+  width: 100%;
+  padding: 15px 130px 15px 130px;
+  display: flex;
+  .arrow {
+    display: flex;
+    align-items: center;
+  }
+
+  .ant-carousel {
+    width: 97%;
+    .slick-dots li.slick-active button {
+      background: #437814;
+      opacity: 1;
+    }
+  }
+  .slick-dots-bottom {
+    bottom: 30px;
+  }
+
+  img {
+    height: 370px;
+  }
+}
+.banner {
+.carousel {
+  display: flex !important;
+  .offer {
+    p {
+      color: rgb(240, 67, 67);
+    }
+  }
+  .ad-text {
+    width: 50%;
+
+    padding-left: 20%;
+    padding-top: 30px;
+    .ant-btn-primary {
+      background-color: #437814;
+      border-color: #437814;
+      font-weight: 300;
+      font-size: larger;
+      margin-top: 20px;
+    }
+  }
+  .percentage {
+    .ant-typography {
+      line-height: 20px;
+      color: #ecce11;
+    }
+  }
+  .sale {
+    color: rgb(0 0 0 / 65%);
+  }
+}}
+@media only screen and (max-width: 1300px) {
+  .banner {
+    padding: 15px 75px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1299px) {
+  .banner {
+    height: 300px;
+    .carousel {
+      .ad-text {
+        width: 50%;
+        padding-left: 15%;
+        padding-top: 0px;
+      }
+      .slick-slide img {
+        height: 280px;
+      }
+      img {
+        height: 280px !important;
+        padding-left: 40px !important;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 989px) {
+  .banner {
+    height: 270px;
+    .carousel {
+      .ad-text {
+        width: 50%;
+        padding-left: 15%;
+        padding-top: 0px;
+        h2.ant-typography {
+          font-size: 25px;
+        }
+        .ant-btn-primary {
+          font-size: 15px;
+          margin-top: 5px;
+        }
+      }
+      .slick-slide img {
+        height: 280px;
+      }
+      img {
+        height: 250px !important;
+        padding-left: 40px !important;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 849px) {
+  .banner {
+    height: 200px;
+    padding: 15px 47px 15px 27px;
+    .ant-typography h2,
+    div.ant-typography-h2,
+    div.ant-typography-h2 > textarea,
+    h2.ant-typography {
+      margin-bottom: 0.5em;
+      color: rgba(0, 0, 0, 0.85);
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 25px;
+    }
+    .offer_per {
+      display: flex;
+
+      .percentage .ant-typography {
+        line-height: 20px;
+        margin-left: 10px;
+      }
+    }
+    .carousel {
+      img {
+        height: 175px !important;
+        padding-left: 0px !important;
+      }
+      .ad-text {
+        width: 60%;
+        .ant-btn-primary {
+          font-size: 15px;
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 599px) {
+  .banner .carousel .ad-text h2.ant-typography {
+    font-size: 16px;
+  }
+  .banner .offer_per .percentage .ant-typography {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 530px) {
+  .banner {
+    margin-top: -15px;
+    height: 200px;
+    .carousel {
+      .ad-text {
+        padding-left: 3%;
+        width: 70%;
+      }
+      .ad-text h2.ant-typography {
+        font-size: 17px;
+      }
+      img {
+        margin-top: 11px;
+        padding-right: 3px;
+        height: 130px !important;
+        padding-left: 0px !important;
+      }
+    }
+    .offer_per {
+      .ant-typography {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 1;
+      }
+      .percentage .ant-typography {
+        line-height: 15px;
+        margin-left: 10px;
+        font-size: 20px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 386px) {
+  .banner {
+    margin-top: 4px;
+    height: 150px;
+    padding: 15px 50px 15px 6px;
+    .carousel {
+      .offer {
+        p {
+          margin-top: 0px;
+        }
+      }
+      .ad-text {
+        h2.ant-typography {
+          font-size: 12px;
+          line-height: 17px;
+        }
+        .ant-btn-primary {
+          font-size: 10px;
+          height: 26px;
+        }
+      }
+      img {
+        margin-top: 11px;
+        padding-right: -1px;
+        height: 95px !important;
+      }
+    }
+    .offer_per {
+      .ant-typography {
+        font-weight: 400;
+        letter-spacing: 0;
+        font-size: 11px;
+      }
+      .percentage .ant-typography {
+        line-height: 13px;
+
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .banner {
+
+    .carousel {
+      .offer {
+        p {
+          font-size: 11px;
+        }
+      }}}}
+@media only screen and (max-width: 289px) {
+  .banner {
+    .ant-carousel {
+      width: 110%;
+    }
+    .arrow {
+      display: flex;
+      align-items: center;
+      width: 14px;
+    }
+  }
+}

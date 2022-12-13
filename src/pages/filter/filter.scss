@@ -1,0 +1,17 @@
+
+  .filter {
+    width: 220px;
+    .header{
+        margin: 0px;
+    }
+    .rating {
+      display: grid;
+      .ant-rate {
+        font-size: 15px;
+      }
+    }
+    .discount {
+      line-height: 10px;
+    }
+  }
+

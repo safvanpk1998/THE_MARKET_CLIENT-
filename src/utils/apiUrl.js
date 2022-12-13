@@ -1,0 +1,12 @@
+export const getAllProduct = '/products';
+export const updateProduct = '/admin/product/';
+export const deleteProduct = '/admin/product/';
+export const getAllUserData = '/admin/users';
+export const getAllOrderData = '/admin/allOrders';
+export const updateUserRole = '/admin/user/';
+export const deleteUser = '/admin/user/';
+export const deleteOrder = '/order/';
+export const updateOrderStatus = '/order/';
+export const getAllStocker = '/stocker/allstocker';
+export const createStocker = '/stocker/new';
+export const deleteStocker = '/stocker/';

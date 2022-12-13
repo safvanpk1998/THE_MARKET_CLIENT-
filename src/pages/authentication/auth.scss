@@ -1,0 +1,146 @@
+.auth-component {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  .main {
+    display: flex;
+    padding-top: 20px;
+    width: 70%;
+    background-color: rgba(220, 231, 231, 0.32);
+    border-radius: 10px;
+    height: 70%;
+    box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 0%) 0px 0px 6px;
+    .login {
+      width: 48%;
+      display: flex;
+      align-items: center;
+      .title {
+        display: flex;
+        justify-content: center;
+      }
+      .wrapper {
+        width: 99%;
+      }
+
+      .details {
+        display: flex;
+        justify-content: center;
+        .ant-form {
+          width: 75%;
+          a {
+            color: #437814;
+          }
+          .ant-input-number {
+            width: 100%;
+          }
+        }
+        .password {
+          .ant-form-item {
+            margin: 0px;
+          }
+        }
+        .end {
+          display: flex;
+          justify-content: end;
+          .ant-btn-primary {
+            background-color: #437814;
+            border-color: #437814;
+          }
+        }
+        .reg {
+          padding-top: 30px;
+        }
+      }
+    }
+    .image {
+      width: 48%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        height: 90%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .auth-component .main {
+    display: flex;
+    padding-top: 20px;
+    width: 80%;
+    height: 70%;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .auth-component .main {
+    display: flex;
+    padding-top: 20px;
+    width: 80%;
+    height: 70%;
+  }
+}
+@media only screen and (max-width: 851px) {
+  .auth-component .main {
+    height: auto;
+    .login {
+      width: 55%;}
+      .image {
+        width: 39%;}
+  }
+}
+@media only screen and (max-width: 651px) {
+  .auth-component .main {
+    height: auto;
+    padding: 15px 0px;
+    .login {
+      width: 63%;}
+      .image {
+        width: 35%;}
+  }
+}
+@media only screen and (max-width: 581px) {
+  .auth-component .main {
+    position: relative;
+    height: auto;
+    .login {
+      width: 100%;
+      z-index: 100;
+       .title {
+        .ant-typography{
+          font-size: 19px;
+        }
+       }
+       .details .ant-form {
+        width: 90%;
+    }
+  }
+      .image {
+        width: 39%;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        img {
+          height: 80%;
+          opacity: .3;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 400px) {
+  .auth-component .main {
+    height: auto;
+
+    .login {
+      width: 100%;
+      z-index: 100;
+       .title {
+        .ant-typography{
+          font-size: 16px;
+        }
+       }
+  }
+  }}
+

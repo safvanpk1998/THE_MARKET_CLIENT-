@@ -1,0 +1,89 @@
+.product-banner {
+  //margin: 0px 15px;
+  .poster {
+    img {
+      height: 85vh;
+      width: 200px;
+    }
+  }
+}
+@media only screen and (max-width: 1129px) {
+  .product-banner .poster img {
+    width: 170px;
+  }
+}
+@media only screen and (max-width: 990px) {
+  .productBanner {
+    margin-left: 0px;
+    .poster {
+      display: none;
+    }
+    .hor-poster {
+      padding: 0px 50px 0px 50px;
+      margin-left: 0px !important;
+      background: linear-gradient(
+        90deg,
+        rgba(58, 116, 180, 1) 0%,
+        rgba(184, 158, 29, 1) -7%,
+        rgba(213, 206, 55, 1) 61%,
+        rgba(69, 252, 148, 1) 100%
+      );
+      img {
+        height: 150px;
+        width: 100%;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 990px) {
+  .hor-poster  {
+    display: none;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .productBanner {
+    .hor-poster {
+      padding: 0px 70px 0px 70px;
+
+      img {
+        height: 140px;
+        width: 100%;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .productBanner {
+    .hor-poster {
+      padding: 0px 85px 0px 85px;
+
+      img {
+        height: 120px;
+        width: 100%;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 481px) {
+  .productBanner {
+    .hor-poster {
+      padding: 0px 50px 0px 50px;
+
+      img {
+        height: 105px;
+        width: 100%;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 350px) {
+  .productBanner {
+    .hor-poster {
+      padding: 0px 18px 0px 18px;
+
+      img {
+        height: 95px;
+      }
+    }
+  }
+}

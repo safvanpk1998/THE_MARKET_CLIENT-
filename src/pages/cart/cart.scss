@@ -1,0 +1,102 @@
+.cart-component {
+  .body {
+    padding: 15px 130px 15px 130px;
+  }
+  .title {
+    display: flex;
+    justify-content: center;
+    height: 300px;
+
+    align-items: center;
+    .ant-typography {
+      font-size: 50px;
+      font-weight: 700;
+    }
+  }
+  .image {
+    img {
+      width: 60px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .cart-component {
+    .body {
+      padding: 15px 50px;
+    }
+  }
+}
+@media only screen and (max-width: 931px) {
+  .cart-component {
+    .body {
+      padding: 15px 50px;
+    }
+    .title{ .ant-typography {
+      font-size: 30px;
+      font-weight: 500;
+  }
+height: 120px;
+}
+    th:first-child {
+     width: 100px;
+  }
+  }
+}
+@media only screen and (max-width: 750px) {
+  .cart-component {
+    .body {
+      padding: 15px 30px;
+    }
+    .title{ .ant-typography {
+      font-size: 25px;
+      font-weight: 600;
+  }
+  height: 80px;}
+  .ant-table-tbody>tr>td{
+    font-size: 15px;
+    padding: 6px;
+  }
+  .ant-table-tbody>tr>td {
+    font-size: 11px;}
+  }
+}
+@media only screen and (max-width: 599px) {
+  .cart-component {
+    
+  .ant-table-tbody>tr>td{
+    font-size: 13px;
+    padding: 5px;
+  }
+  .ant-table-thead>tr>th{
+    font-size: 13px;
+    padding: 6px;
+  }
+  }
+}
+@media only screen and (max-width: 475px) {
+  .cart-component {
+    .body {
+      padding: 15px 10px;
+  }
+    .title{ .ant-typography {
+      font-size: 17px;
+      font-weight: 500;
+  }
+height: 40px;
+}
+    
+  .ant-table-tbody>tr>td{
+    font-size: 13px;
+    padding: 5px;
+  }
+  .ant-table-thead>tr>th{
+    font-size: 13px;
+    padding: 6px;
+  }
+ .ant-table-tbody > tr > td {
+    font-size: 10px;
+    padding: 3px;
+}
+  }
+}

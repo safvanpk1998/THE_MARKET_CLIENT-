@@ -1,0 +1,168 @@
+.action-component {
+  padding: 40px 130px 15px 130px;
+  background-color: rgba(220, 231, 231, 0.32);
+  .head {
+    display: flex;
+    .header {
+      width: 50%;
+      .ant-typography {
+        font-weight: 500;
+        font-size: 21px;
+      }
+    }
+    .button {
+      width: 50%;
+      display: flex;
+      justify-content: end;
+      .add_product {
+        .ant-btn,
+        .ant-btn:active,
+        .ant-btn:focus,
+        .ant-input-number {
+          background-color: #437814;
+          border: #437814;
+          color: white;
+          margin-right: 20px;
+          height: 40px;
+        }
+      }
+      .add_stocker {
+        .ant-btn,
+        .ant-btn:active,
+        .ant-btn:focus,
+        .ant-input-number {
+          background-color: #ecce11;
+          border: #ecce11;
+          color: white;
+          margin-right: 20px;
+          height: 40px;
+        }
+      }
+    }
+  }
+
+  .crud {
+    // background-color: rgba(14, 172, 156, 0.28);
+    // border-radius:10px;
+    width: 100%;
+
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .create {
+      position: relative;
+      overflow: hidden;
+      height: 160px;
+      width: 22%;
+      border-radius: 10px;
+      margin-bottom: 49px;
+      // background-color: #;#582d88
+
+      .title {
+        position: relative;
+        padding: 14px 20px;
+       
+        .data {
+          position: absolute;
+          z-index: 100;
+          display: flex;
+          flex-direction: column;
+          p{
+            font-weight: 500;
+            color: white;
+            font-size: 13px;
+          }
+        }
+
+        .ant-typography {
+          z-index: 100;
+          margin: 0px;
+        }
+        img {
+          width: 84%;
+          position: absolute;
+          top: 0px;
+          z-index: 0;
+        }
+        .count {
+          .ant-typography {
+            color: white;
+            margin: 0px;
+            z-index: 100;
+          }
+        }
+      }
+
+      p {
+        margin-bottom: 0.5em;
+        color: rgba(0, 0, 0, 0.85);
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+      .data {
+        display: flex;
+        .numbers {
+          width: 60%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .ant-typography {
+            color: #131175;
+          }
+          .ant-btn {
+            background-color: #437814;
+            border-color: #437814;
+            color: white;
+          }
+        }
+        .image {
+          width: 40%;
+          display: flex;
+          justify-content: center;
+          img {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+.create-product {
+  .form {
+    display: flex;
+    justify-content: space-between;
+    .ant-form-item {
+      width: 45%;
+    }
+    .traders{
+      width: 45%;
+      .ant-form-item {
+        width: 100%;
+      }
+    }
+    .ant-col-16 {
+      display: block;
+      flex: 0 0 66.66666667%;
+      max-width: 90%;
+    }
+  }
+  .ant-input-number {
+    width: 100%;
+  }
+  .ant-btn {
+    background-color: #437814;
+    border-color: #437814;
+    color: white;
+    margin-right: 30px;
+  }
+
+  .button {
+    display: flex;
+    justify-content: end;
+    margin-right: 30px;
+  }
+}

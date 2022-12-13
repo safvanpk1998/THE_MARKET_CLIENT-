@@ -1,0 +1,558 @@
+.headerComponent {
+  margin: 15px 140px 15px 140px;
+  .base-raw {
+    font-size: medium;
+    display: flex;
+    .title-comment {
+      width: 50%;
+    }
+    .settings {
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  .stickySearch {
+    .ant-btn {
+      border-color: #437814;
+      background-color: #437814;
+      color: white;
+    }
+  }
+  .mid-row {
+    display: flex;
+    margin-top: 18px;
+    .heading {
+      width: 25%;
+      h1 {
+        font-weight: 700;
+        margin-top: -11px;
+        font-family: "Signika";
+      }
+      .logo {
+        color: #437814;
+      }
+    }
+    .search {
+      width: 50%;
+      .ant-btn-primary {
+        background-color: #437814;
+        border-color: #437814;
+      }
+    }
+    .icons {
+      padding-left: 60px;
+      width: 25%;
+      display: flex;
+      justify-content: space-between;
+      .dropdown {
+        display: flex;
+        align-items: center;
+      }
+      .cart-icon {
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .user {
+        display: flex;
+        width: 50%;
+        justify-content: space-around;
+        align-items: center;
+        .userName {
+          margin-top: 9px;
+          display: flex;
+        }
+        h3 {
+          margin-top: -8px;
+          margin-bottom: 2px;
+        }
+      }
+    }
+    .userIcon {
+      width: 25%;
+      display: flex;
+      justify-content: space-between;
+      .dropdown {
+        display: flex;
+        align-items: center;
+      }
+      .cart-icon {
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .user {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        .userName {
+          margin-top: 9px;
+        }
+        .ant-dropdown-triggera {
+          margin-top: 10px;
+          color: black;
+        }
+        h3 {
+          margin-top: -8px;
+          margin-bottom: 2px;
+          color: #437814;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+.ant-drawer {
+  .heading {
+    width: 100%;
+    display: flex;
+    // padding: 15px;
+    h2 {
+      width: 70%;
+      font-weight: 700;
+      font-size: 18px;
+      margin-top: -10px;
+      .logo {
+        color: #437814;
+      }
+    }
+    .home {
+      display: flex;
+      justify-content: end;
+      width: 30%;
+      margin-top: -10px;
+      color: #437814;
+    }
+  }
+  .menuItems {
+    margin-top: 10px;
+    display: flex;
+    .icon {
+      margin-right: 20px;
+      margin-top: 3px;
+    }
+  }
+  .login {
+    .ant-btn {
+      border-color: #437814;
+      background-color: #437814;
+      color: white;
+    }
+  }
+}
+.ant-drawer-body {
+  position: relative;
+  padding: 0px !important;
+  .content {
+    padding: 24px;
+    padding-bottom: 125px;
+  }
+  .userdata {
+    position: fixed;
+    background: #f0f2f5;
+    z-index: 10000;
+    bottom: 0;
+    // width: 100%;
+    .login {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .ant-layout-footer {
+      padding: 5px;
+      margin-top: 15px;
+    }
+  }
+}
+
+.menu-bar {
+  padding: 0px 140px 0px 140px;
+  display: flex;
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+  }
+  // a:hover {
+  //   background-color: yellow;
+  // }
+  .navbar {
+    display: flex;
+    .menu-item {
+      margin: 3px 0px;
+      height: 28px;
+      border-radius: 6px;
+      padding: 0px 10px;
+    }
+  }
+
+  .select {
+    .ant-select {
+      width: 175px;
+      .ant-select-selector {
+        border: none;
+        .ant-select-selection-placeholder {
+          color: black;
+        }
+      }
+
+      .ant-select-selector:hover {
+        background: #437814d9;
+        margin-top: 3px;
+        height: 28px;
+        border-radius: 6px;
+        padding: 0px 10px;
+        .ant-select-selection-placeholder {
+          color: white;
+        }
+      }
+    }
+  }
+  .navbar {
+    .menu-item:hover {
+      background: #437814d9;
+      margin-top: 3px;
+      height: 28px;
+      border-radius: 6px;
+      padding: 0px 10px;
+      h3 {
+        color: white;
+      }
+    }
+  }
+
+  .phone-icon {
+    margin: 0pc 5px;
+  }
+  .hotline {
+    margin-top: 3px;
+    height: 28px;
+    border-radius: 6px;
+    padding: 0px 10px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .headerComponent {
+    margin: 15px 50px;
+  }
+  .menu-bar {
+    padding: 15px 50px;
+  }
+}
+@media only screen and (min-width: 1101px) and (max-width: 1199px) {
+  .menu-bar{
+    font-size: 12px;
+  }
+
+}
+@media only screen and (min-width: 1101px) and (max-width: 1250px) {
+
+  .menu-bar {.navbar .menu-item {
+
+    padding: 0px 8px;
+}
+.select .ant-select {
+  width: 154px;
+}}}
+
+@media only screen and (min-width: 990px) {
+  .menubar {
+    display: none;
+  }
+  .moto {
+    display: none;
+  }
+  .menu_image {
+    display: none;
+  }
+}
+@media only screen and (min-width: 990px) and (max-width: 1100px) {
+  .headerComponent {
+    .base-raw {
+      font-size: small;
+      .title-comment {
+        width: 40%;
+      }
+      .settings {
+        width: 60%;
+
+        .ant-select {
+          width: 130px;
+
+          margin-top: 10px;
+        }
+      }
+    }
+    .mid-row {
+      .heading {
+        width: 22%;
+        h1 {
+          font-weight: 700;
+          font-size: 25px;
+          margin-top: 0px;
+        }
+      }
+      .icons {
+        padding-left: 35px;
+        width: 30%;
+      }
+    }
+  }
+  .menu-bar {
+    padding: 15px 14px;
+    font-size: 11px;
+    .select .ant-select {
+      width: 155px;
+    }
+    .menu_image {
+      display: none;
+    }
+    .navbar .menu-item {
+      margin: 3px 0px;
+      height: 28px;
+      border-radius: 6px;
+      padding: 0px 8px;
+    }
+  }
+}
+@media only screen and (max-width: 990px) {
+  .headerComponent {
+    .base-raw {
+      display: none;
+    }
+    .mid-row {
+      position: relative;
+      .icons {
+        display: none;
+      }
+      .userIcon {
+        display: none;
+      }
+      .user {
+        display: none;
+      }
+      .heading {
+        width: 50%;
+
+        font-size: 20px;
+      }
+      .moto {
+        position: absolute;
+
+        margin-top: 33px;
+
+        font-size: 10px;
+      }
+      .search {
+        position: absolute;
+        margin-top: 55px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      .stickySearch {
+        position: fixed;
+        width: 100%;
+        padding: 4px 50px;
+        left: 0;
+        top: 0px;
+        background: white;
+        z-index: 10000;
+        .ant-input-group-wrapper {
+          margin-top: 15px;
+        }
+        .ant-btn {
+          border-color: #437814;
+          background-color: #437814;
+          color: white;
+        }
+      }
+      .menubar {
+        display: flex;
+        justify-content: end;
+        font-size: 30px;
+        width: 50%;
+        margin-top: 8px;
+      }
+    }
+    .ant-menu-horizontal {
+      margin-top: 28px;
+    }
+  }
+
+  .bottom-row {
+    margin-top: 30px;
+    .menu-bar {
+      overflow: scroll;
+      padding: 15px 50px 0px 50px;
+
+      align-items: center;
+      .hotline {
+        h3 {
+          width: 200px;
+        }
+      }
+      .menu {
+        width: auto;
+        align-items: center;
+      }
+      .navbar {
+        display: none !important;
+      }
+      .menu_image {
+        display: flex;
+
+        .menu-item {
+          width: 80px;
+          a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          img {
+            height: 50px;
+          }
+          h3 {
+            font-weight: 400;
+            font-size: 13px;
+          }
+        }
+      }
+      .select .ant-select {
+        width: 160px;
+      }
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+@media only screen and (max-width: 849px) {
+  .headerComponent {
+    margin: 15px 30px;
+  }
+
+  .bottom-row .menu-bar {
+    letter-spacing: 0px;
+    padding: 8px 10px 0px 10px;
+    .select .ant-select {
+      width: 137px;
+    }
+    .menu_image .menu-item img {
+      height: 38px !important;
+    }
+  }
+}
+@media only screen and (max-width: 599px) {
+  .headerComponent {
+    margin: 15px 15px;
+    .mid-row {
+      .heading {
+        width: 66%;
+        font-size: 16px;
+      }
+      .stickySearch {
+        padding: 0px 15px 3px 15px;
+      }
+      .menubar {
+        margin-top: 0px;
+      }
+      .moto {
+        margin-top: 20px;
+        p {
+          font-size: 10px;
+          margin-top: 6px;
+        }
+      }
+    }
+  }
+  .bottom-row {
+    margin-top: 45px;
+  }
+}
+@media only screen and (max-width: 386px) {
+  .headerComponent {
+    .mid-row {
+      .heading {
+        width: 90%;
+        font-size: 13px;
+      }
+      .moto {
+        margin-top: 12px;
+    }
+      .menubar {
+        font-size: 20px;
+      }
+      .search {
+        margin-top: 36px;
+        .ant-input-search .ant-input-affix-wrapper {
+          height: 30px;
+        }
+      }
+      .stickySearch {
+        margin-top: 0px;
+        .ant-input-search .ant-input-affix-wrapper {
+          height: 30px;
+        }
+      }
+      .ant-input-search-large .ant-input-search-button {
+        height: 30px;
+        font-size: 12px;
+      }
+    }
+  }
+  .bottom-row {
+    margin-top: 47px;
+    .ant-menu-horizontal {
+      margin-top: -19px;
+    }
+    .menu-bar {
+      .select .ant-select {
+        width: 118px;
+        font-size: 11px;
+      }
+      .hotline h3 {
+        width: 120px;
+        font-size: 11px;
+      }
+
+      .menu_image {
+        .menu-item {
+          width: 65px;
+          img {
+            height: 30px !important;
+          }
+          h3 {
+            font-size: 11px;
+          }
+        }
+      }
+      .ant-menu-horizontal {
+        margin-top: -8px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 289px) {
+  .headerComponent {
+    .mid-row {
+      .heading {
+        width: 90%;
+        font-size: 12px;
+      }
+
+      .moto p {
+        font-size: 9px;
+        margin-top: 5px;
+      }
+    }
+  }
+}

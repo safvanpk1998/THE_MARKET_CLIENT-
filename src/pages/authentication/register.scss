@@ -1,0 +1,65 @@
+.auth-component {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    .main {
+      display: flex;
+      padding-top: 20px;
+      width: 70%;
+      background-color: rgba(220, 231, 231, 0.32);
+      border-radius: 10px;
+      height: 70%;
+      box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 0%) 0px 0px 6px;
+      .login {
+        width: 48%;
+        display: flex;
+        align-items: center;
+        .title {
+          display: flex;
+          justify-content: center;
+        }
+        .wrapper {
+          width: 99%;
+        }
+  
+        .details {
+          display: flex;
+          justify-content: center;
+          .ant-form {
+            width: 75%;
+            a {
+              color: #437814;
+            }
+          }
+          .password {
+            .ant-form-item {
+              margin: 0px;
+            }
+          }
+          .end {
+            display: flex;
+            justify-content: end;
+            .ant-btn-primary {
+              background-color: #437814;
+              border-color: #437814;
+            }
+          }
+          .reg {
+            padding-top: 30px;
+          }
+        }
+      }
+      .image {
+        width: 48%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          height: 90%;
+        }
+      }
+    }
+  }
+  

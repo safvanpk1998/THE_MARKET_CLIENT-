@@ -1,0 +1,242 @@
+.PoductDetails {
+ 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  .productWrapper {
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overflow: auto;
+    text-align: justify;
+    height: 85vh;
+    .ant-col {
+      margin-left: 15px;
+      width: 190px;
+      margin-bottom: 15px;
+    }
+    .ant-card.ant-card-bordered {
+      height: 330px;
+    }
+
+    .product-card {
+      display: flex;
+      justify-content: center;
+
+      overflow: hidden;
+      width: 160px;
+      height: 160px;
+      img {
+        width: 95% !important;
+      }
+      .ant-card-body {
+        padding: 15px;
+      }
+    }
+    .deatails {
+      .ant-typography {
+        font-size: 15px;
+        color: #23236d;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        height: 67px;
+      }
+      .ant-rate {
+        font-size: 15px;
+      }
+      .rate {
+        .ant-typography {
+          font-size: 15px;
+          color: black;
+          margin-top: 8px;
+        }
+      }
+      .ogPrice {
+        text-decoration: line-through;
+      }
+    }
+
+  }
+  .productWrapper::-webkit-scrollbar {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1129px) {
+  .PoductDetails {
+    .productWrapper {
+      .ant-col {
+        margin-left: 15px;
+        width: 155px;
+        margin-bottom: 15px;
+      }
+      .product-card {
+        width: 150px;
+        height: 150px;
+      }
+      .deatails {
+        .ant-typography {
+          font-size: 13px;
+          height: 59px;
+        }
+        .ant-rate {
+          font-size: 13px;
+        }
+        .rate .ant-typography {
+          font-size: 13px;
+        }
+      }
+      .ant-card.ant-card-bordered {
+        height: 310px;
+      }
+    }
+    .ant-card-body {
+      padding: 5px;
+    }
+  }
+}
+@media only screen and (max-width: 990px) {
+  .PoductDetails {
+    padding: 0px 50px 15px 50px;
+    .productWrapper {
+      .ant-col {
+        width: 22%;
+      }
+      .product-card {
+        width: 160px;
+        height: 160px;
+        img {
+          width: 130px !important;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 750px) {
+  .PoductDetails {
+    padding: 0px 30px 15px 30px;
+    width: 100%;
+    .productWrapper {
+      .ant-col {
+        width: 30%;
+        margin-left: 11px;
+      }
+      .product-card {
+        width: 100%;
+        height: 190px;
+        img {
+          width: 97% !important;
+        }
+      }
+  
+    }
+    .ant-card-body {
+      padding: 5px;
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .PoductDetails {
+    padding: 0px 20px 15px 20px;
+
+    .productWrapper {
+      .product-card {
+        height: 147px;
+      }
+      .ant-card.ant-card-bordered {
+        height: 270px;
+      }
+      .deatails {
+        .ant-rate {
+          font-size: 11px;
+        }
+
+        .ant-typography {
+          font-size: 12px;
+          height: 56px;
+        }
+      }
+    }
+    .ant-card-body {
+      padding: 5px;
+    }
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .PoductDetails {
+    padding: 0px 20px 15px 20px;
+
+    .productWrapper {
+      .ant-col {
+        width: 45%;
+      }
+      .ant-card.ant-card-bordered {
+        height: 255px;
+      }
+      .product-card { 
+        height: 135px;
+        img {
+        width: 120px !important;
+        height: 120px;
+      }}
+      .deatails {
+        .ant-rate {
+          font-size: 11px;
+        }
+
+        .ant-typography {
+          font-size: 12px;
+          height: 53px;
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 481px) {
+  .PoductDetails {
+    padding: 0px 10px 15px 0px;
+
+    .productWrapper {
+      .ant-card.ant-card-bordered {
+        height: 230px;
+      }
+      .ant-ribbon-text {
+        font-size: 10px;
+  
+    }
+      .product-card { 
+        height: 110px;
+        img {
+          width: 98px !important;
+          height: 95px;
+      }}
+      .deatails {
+        .ant-rate {
+       
+          .ant-rate-star {
+            margin-right: 6px;
+        }
+        }
+
+        .ant-typography {
+          font-size: 11px;
+          height: 49px;
+        }
+        .rate .ant-typography {
+          font-size: 11px;
+      }
+      }
+    }
+  }
+}

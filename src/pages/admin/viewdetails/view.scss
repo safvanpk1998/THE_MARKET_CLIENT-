@@ -1,0 +1,36 @@
+.view-component {
+    margin: 15px 140px 15px 140px;
+    display: flex;
+    .tab{
+      width: 97%;
+    }
+    .refresh{
+      .ant-btn {
+        background-color: #437814;
+        border-color: #437814;
+        color: white;
+      
+      }
+    }
+    .image{
+        img{
+          width: 60px;
+        }
+      }
+      border-color: white;
+      background: white;
+
+      
+     
+     
+}
+.user-role{
+  .button{
+    display: flex;
+justify-content: end;
+padding-right: 41px;
+  }
+
+}
+
+    

@@ -1,0 +1,300 @@
+.wishList-Component {
+  .viewProduct {
+    padding: 15px 130px 15px 130px;
+    .heading {
+      display: flex;
+      justify-content: center;
+      height: 300px;
+      align-items: center;
+      .ant-typography {
+        font-size: 50px;
+        font-weight: 700;
+      }
+    }
+    .order-Details {
+      margin-top: 20px;
+    }
+    .details {
+      display: flex;
+      margin-bottom: 20px;
+      .image {
+        width: 20%;
+        padding: 20px;
+        img {
+          width: 95%;
+        }
+      }
+      .order-Details {
+        width: 80%;
+        .steps {
+          .title {
+            display: flex;
+            justify-content: space-between;
+            .ant-typography {
+              color: #1e0b68;
+            }
+
+            .ant-btn-group {
+              margin: 0px 10px;
+              button {
+                margin: 0px 10px;
+              }
+            }
+          }
+          .ant-steps {
+            margin: 20px 0px;
+            .ant-steps-item-content {
+              width: 120px;
+            }
+          }
+          .product {
+            display: flex;
+            justify-content: space-between;
+            .data {
+              font-weight: bold;
+              font-size: 16px;
+            }
+            .ant-rate {
+              font-size: 15px;
+            }
+            .button {
+              display: flex;
+              .ant-btn {
+                width: 150px;
+                margin-left: 20px;
+                color: white;
+                height: 40px;
+              }
+              .buy {
+                .ant-btn {
+                  background-color: #437814;
+                  border: #437814;
+                }
+              }
+              .cancel {
+                .ant-btn {
+                  background-color: #ecce11;
+                  border: #ecce11;
+                }
+              }
+            }
+          }
+          .total {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            .data {
+              color: #09c;
+            }
+          }
+        }
+      }
+    }
+    hr {
+      color: rgb(35, 37, 35);
+      border-radius: 2px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .wishList-Component {
+    .viewProduct {
+      padding: 15px 50px;
+      .details .order-Details {
+        width: 80%;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 900px) {
+  .wishList-Component {
+    .viewProduct {
+      padding: 15px 30px;
+      .details .order-Details {
+        .title .ant-typography {
+          font-size: 16px;
+        }
+        .steps {
+          .product {
+            .data {
+              font-size: 14px;
+              font-size: 12px;
+            }
+            .ant-rate {
+              font-size: 13px;
+            }
+            .button .ant-btn {
+              width: 130px;
+              height: 35px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 636px) {
+  .wishList-Component {
+    .viewProduct {
+      padding: 15px 10px;
+      .details {
+        .image {
+          display: flex;
+          align-items: center;
+          width: 16%;
+          padding: 2px;
+        }
+        .order-Details {
+          width: 83%;
+          margin-top: 0px;
+          .title {
+            .ant-typography {
+              font-size: 14px;
+              margin: 0px 0px 5px 0px;
+            }
+            // .count {
+            //   height: 100%;
+            //   display: flex;
+            //   align-items: center;
+            // }
+          }
+
+          .steps {
+            .total {
+              font-size: 12px;
+            }
+            .product {
+              .data {
+                font-size: 14px;
+                font-size: 12px;
+              }
+              .ant-rate {
+                font-size: 11px;
+              }
+              .button .ant-btn {
+                width: 115px;
+                height: 30px;
+                font-size: 13px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 511px) {
+  .wishList-Component .viewProduct .details .mobileScreen {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 511px) {
+  .wishList-Component .viewProduct {
+
+    padding: 15px 20px;
+    .details{ .image {
+      display: none !important;
+    }
+    .order-Details {
+      width: 100%;
+      margin-top: 0px;
+      .steps .title {
+        margin-bottom: 10px;
+        .mobileScreen{
+          width: 100px;
+  
+          img{
+            width: 87%;
+          }
+        }
+        .ant-typography {
+          font-size: 13px;
+          margin: 5px 0px 5px 0px;
+      }
+      .count
+        {
+          align-items: center;
+          display: flex;
+          height: 50%;
+          svg{
+            
+              height: 15px;
+          
+          }
+      
+      }
+
+
+      }
+      .product {
+        font-size: 10px;
+        margin: 0px 5px;
+        .button .ant-btn {
+          width: 90px !important ;
+          height: 28px !important;
+          font-size: 11px !important;
+
+      }
+      .ant-rate {
+    font-size: 10px !important;
+    .ant-rate-star {
+      margin-right: 3px;
+  }
+      }
+    }
+    .total{
+      margin: 0px 5px;
+      font-size: 11px !important;
+      margin-top: 5px !important;
+      .ant-typography {
+        font-size: 15px;
+    }
+    }
+  }
+  }
+  }
+}
+
+@media only screen and (max-width: 358px) {
+  .wishList-Component .viewProduct {
+    padding: 15px 15px;
+    .details .order-Details .steps{ .title{ .ant-typography {
+      font-size: 11px;
+      margin: 5px 0px 5px 0px;
+  }
+  .count {
+    height: 60%;
+    svg {
+      height: 12px;
+  }}
+}
+.product {
+  flex-wrap: wrap;
+  .data {
+  font-size: 11px;
+  line-height: 20px;
+}
+.button {
+width: 100%;
+margin-top: 10px;
+.buy,.cancel{
+  width: 50%;
+
+  .ant-btn{
+    width: 95% !important;
+    height: 30px !important;
+    margin-left: 5px;
+}
+}
+}
+
+}
+}
+
+}
+
+
+
+
+}

@@ -1,0 +1,662 @@
+.BasicDetails {
+  margin: 15px 140px 15px 140px;
+  .vertical {
+    border-left: 2px solid rgba(156, 150, 150, 0.97);
+    height: 17px;
+    margin-left: 11px;
+    margin-right: 11px;
+  }
+  .header {
+    padding-top: 15px;
+    display: flex;
+    .title,
+    .title-Screen {
+      width: 50%;
+    }
+    .info,
+    .info-medium {
+      display: flex;
+
+      p {
+        margin-bottom: 0px;
+
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 1.5;
+        color: rgba(80, 76, 76, 0.85);
+
+        .name {
+          color: #437814;
+        }
+      }
+
+      .data {
+        display: flex;
+        align-items: center;
+        .ant-rate {
+          font-size: 15px;
+        }
+      }
+    }
+    .add {
+      width: 50%;
+      display: flex;
+      justify-content: end;
+      .count {
+        .ant-btn {
+          margin: 10px;
+          height: 45px;
+        }
+        .ant-typography {
+          margin-top: 15px;
+        }
+      }
+      .buy {
+        display: flex;
+        .ant-btn,
+        .ant-btn:active,
+        .ant-btn:focus,
+        .ant-input-number {
+          background-color: #437814;
+          border: #437814;
+          margin: 10px;
+          color: white;
+          width: 130px;
+          height: 45px;
+          font-size: 17px;
+          font-weight: 500;
+        }
+        .ant-input-number {
+          background-color: rgb(189, 8, 8);
+          border: black;
+        }
+        .cart-button {
+          .ant-btn,
+          .ant-btn:active,
+          .ant-btn:focus {
+            background-color: #ecce11;
+            border: #ecce11;
+          }
+        }
+      }
+
+      .count {
+        .ant-btn {
+          // width: auto;
+          // background-color: white;
+          // color: black;
+          // border: black;
+        }
+      }
+    }
+  }
+  hr {
+    color: rgb(35, 37, 35);
+    border-radius: 2px;
+  }
+  .summary {
+    display: flex;
+    width: 100%;
+    .image {
+      width: 40% !important;
+      display: flex;
+      .pics {
+        width: 15%;
+      }
+      .enlarge {
+        width: 95%;
+        img {
+          margin-top: 10px;
+          width: 70%;
+        }
+      }
+    }
+    .details,
+    .title-Screen {
+      width: 60%;
+      .rate {
+        display: flex;
+        .ant-typography {
+          color: rgb(240, 67, 67);
+        }
+        .dashed {
+          margin-top: 10px;
+          text-decoration: line-through;
+          .old-value {
+            line-height: 10px;
+          }
+        }
+        h5.ant-typography {
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 28px;
+          margin-left: 6px;
+        }
+      }
+
+      p {
+        display: flex;
+        margin-left: 10px;
+      }
+
+      .list {
+        padding: 5px 5px;
+        font-size: 15px;
+        font-weight: 500;
+        color: rgba(80, 76, 76, 0.85);
+      }
+    }
+
+    .name {
+      color: #09c;
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 500;
+    }
+  }
+  .tabs {
+    margin-left: 10px;
+    margin-top: 20px;
+    .vendor {
+      p {
+        line-height: 25px;
+      }
+      .criteria {
+        font-size: 15px;
+        font-weight: 500;
+      }
+      .ant-rate {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .BasicDetails {
+    margin: 15px 50px;
+    .summary .details .list {
+      font-size: 13px;
+    }
+  }
+}
+@media only screen and (max-width: 1380px) {
+  .BasicDetails {
+    .header {
+      .title {
+        width: 65%;
+        .ant-typography {
+          font-size: 20px;
+        }
+      }
+      .info p {
+        font-size: 14px;
+        line-height: 10px;
+      }
+      .add {
+        .count .ant-btn {
+          margin: 10px;
+          height: 40px;
+        }
+        .buy .ant-btn {
+          width: 120px;
+          height: 40px;
+          font-size: 15px;
+        }
+      }
+    }
+    .summary .details {
+      .rate .ant-typography {
+        font-size: 18px;
+        svg {
+          width: 10px;
+        }
+        .rate {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1125px) {
+  .BasicDetails {
+    .header {
+      .title {
+        width: 60%;
+        .ant-typography {
+          font-size: 18px;
+        }
+      }
+      .add {
+        width: 38%;
+        .count {
+          .ant-btn {
+            margin: 10px 5px 5px 5px;
+            height: 35px;
+            width: 30px;
+          }
+          .ant-typography {
+            margin-top: 15px;
+            font-size: 20px;
+          }
+        }
+        .buy .ant-btn {
+          width: 100px;
+          height: 35px;
+          font-size: 15px;
+        }
+      }
+      .info {
+        p {
+          font-size: 12px;
+        }
+        .data .ant-rate {
+          font-size: 11px;
+          .ant-rate-star:not(:last-child) {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+    .summary {
+      .details p {
+        margin-bottom: 1px;
+        font-size: 12px;
+      }
+      .image {
+        .pics {
+          display: none;
+        }
+        .enlarge {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 930px) {
+  .BasicDetails .header .info-medium {
+    display: none;
+  }
+}
+@media only screen and (max-width: 930px) {
+  .BasicDetails {
+    .header {
+      flex-wrap: wrap;
+
+      .info {
+        display: none;
+      }
+      .title {
+        width: 50%;
+        .ant-typography {
+          font-size: 15px;
+        }
+      }
+      .add {
+        width: 50%;
+        .count {
+          .ant-btn {
+            height: 25px;
+            width: 25px;
+          }
+          .ant-typography {
+            margin-top: 11px;
+            font-size: 18px;
+          }
+        }
+        .buy .ant-btn {
+          width: 90px;
+          margin: 10px 0px 10px 10px;
+          height: 30px;
+          font-size: 13px;
+        }
+      }
+      .info-medium p {
+        font-size: 12px;
+        line-height: 10px;
+      }
+    }
+    .summary {
+      .details {
+        .list {
+          font-size: 13px;
+        }
+        p {
+          font-size: 11px;
+        }
+      }
+      .name {
+        color: #09c;
+        font-size: 15px;
+        line-height: 17px;
+        font-weight: 500;
+      }
+      .image .enlarge img {
+        width: 110%;
+      }
+    }
+    .ant-tabs-tab-btn {
+      font-size: 12px;
+    }
+
+    .tabs {
+      .ant-tabs-tabpane {
+        .ant-typography {
+          font-size: 15px;
+        }
+
+        font-size: 13px;
+      }
+      .ant-table-thead>tr>th {
+        padding: 12px;
+        font-size: 12px;
+      }
+      .vendor .criteria {
+        font-size: 13px;
+        font-weight: 500;
+    }
+    }
+  }
+}
+@media only screen and (min-width: 661px) {
+  .title-Screen {
+    display: none;
+  }
+}
+@media only screen and (max-width: 661px) {
+  .BasicDetails {
+    margin: 15px 30px;
+
+    .header {
+      padding-top: 0px;
+      .ant-rate {
+        font-size: 12px !important;
+      }
+
+      .title,
+      .title-Screen {
+        width: 100%;
+        .ant-typography {
+          width: 100%;
+          font-size: 15px;
+        }
+        .anticon svg {
+          display: inline-block;
+          font-size: 12px;
+        }
+      }
+
+      .add {
+        left: 0;
+        height: 60px;
+        bottom: 0%;
+        width: 100%;
+        padding-bottom: 50px;
+        background-color: #393838;
+        opacity: 1;
+        position: fixed;
+        z-index: 500;
+        border: 0px;
+        display: flex;
+        justify-content: center;
+        background-color: whitesmoke;
+        .buy {
+          width: 65%;
+          justify-content: space-evenly;
+
+          .ant-btn {
+            width: 150px;
+            margin: 10px 0px 10px 10px;
+            height: 40px;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+
+    .summary {
+      flex-direction: column;
+
+      .details .rate .ant-typography {
+        font-size: 12px;
+        svg {
+          width: 8px;
+          margin-top: 5px;
+        }
+      }
+      .title {
+        display: none;
+        .summary {
+          .title-Screen {
+            .rate .ant-typography {
+              font-size: 16px;
+              svg {
+                width: 9px;
+              }
+            }
+          }
+        }
+      }
+      .image {
+        width: 100% !important;
+
+        align-items: center;
+        justify-content: center;
+        .enlarge {
+          width: 40%;
+        }
+      }
+    }
+    .summary .details {
+      width: 100%;
+    }
+
+    .tabs {
+      .ant-tabs-tabpane {
+        .ant-typography {
+          font-size: 14px;
+        }
+
+        font-size: 12px;
+      }
+      .ant-table-thead>tr>th {
+        padding: 12px;
+        font-size: 12px;
+      }
+      .vendor .criteria {
+        font-size: 13px;
+        font-weight: 500;
+    }
+    }
+
+  }
+  .BasicDetails .summary .title-Screen {
+    p {
+      display: flex;
+      margin-left: 5px;
+      font-size: 12px;
+    }
+  }
+}
+@media only screen and (max-width: 511px) {
+  .BasicDetails {
+    margin: 15px 15px;
+    .add .buy .ant-btn {
+      width: 120px;
+      margin: 5px 0px 5px 10px;
+      height: 35px;
+    }
+    .header {
+      .title .ant-typography {
+        width: 100%;
+        font-size: 17px;
+      }
+      .ant-rate {
+        font-size: 14px !important;
+        .ant-rate-star:not(:last-child) {
+          margin-right: 6px;
+        }
+      }
+      .info-medium p {
+        font-size: 12px;
+        line-height: 19px;
+      }
+      .add .buy .ant-btn {
+        width: 125px;
+        margin: 10px 0px 10px 10px;
+        height: 35px;
+        font-size: 15px;
+      }
+    }
+    .summary {
+      flex-direction: column;
+      flex-wrap: wrap;
+      .details .list {
+        font-size: 11px;
+      }
+      .image {
+        flex-wrap: wrap;
+        .enlarge {
+          width: 70%;
+          margin-left: 12%;
+        }
+        .dealer {
+          display: flex;
+        }
+      }
+      .title-Screen {
+        width: 100%;
+        margin-left: 2%;
+        margin-top: 11px;
+        p {
+          display: flex;
+          margin-left: 1px;
+          font-size: 11px;
+        }
+        .old-value {
+          display: flex;
+          margin-left: 5px;
+          font-size: 16px;
+        }
+
+        .rate .ant-typography {
+          font-size: 20px;
+          svg {
+            width: 13px;
+          }
+        }
+      }
+    }
+    .ant-tabs-tab-btn {
+      font-size: 11px;
+  }
+
+    .tabs {
+      .ant-tabs-tabpane {
+        .ant-typography {
+          font-size: 13px;
+        }
+
+        font-size: 11px;
+      }
+      .ant-table-thead>tr>th {
+        padding: 9px;
+        font-size: 11px;
+      }
+      .vendor .criteria {
+        font-size: 12px;
+        font-weight: 500;
+    }
+    }
+  }
+}
+
+@media only screen and (max-width: 368px) {
+  .BasicDetails {
+    .ant-tabs-tab-btn {
+      font-size: 9px;
+    }
+    .header {
+      .title .ant-typography {
+        width: 100%;
+        font-size: 12px;
+      }
+      .info-medium p {
+        font-size: 10px;
+        line-height: 19px;
+      }
+      .ant-rate {
+        font-size: 11px !important;
+        .ant-rate-star:not(:last-child) {
+          margin-right: 4px;
+        }
+      }
+      .add {
+        height: 50px;
+        .buy .ant-btn {
+          width: 70px;
+          margin: 10px 0px 10px 10px;
+          height: 24px;
+          font-size: 10px;
+        }
+      }
+    }
+    .summary {
+      .title-Screen {
+        .rate {
+          .ant-typography {
+            font-size: 12px;
+            svg {
+              width: 7px;
+              padding-top: 10px;
+            }
+          }
+          h5.ant-typography {
+            font-size: 11px;
+          }
+        }
+        .dashed svg {
+          width: 18px;
+          padding-left: 11px;
+        }
+        .old-value {
+          font-size: 12px;
+        }
+      }
+
+      .name {
+        font-size: 12px;
+      }
+      .image .dealer {
+        flex-wrap: wrap;
+      }
+    }
+    .vertical {
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+    .tabs {
+      .ant-tabs-tabpane {
+        .ant-typography {
+          font-size: 12px;
+        }
+
+        font-size: 10px;
+      }
+      .ant-table-thead>tr>th {
+        padding: 5px;
+        font-size: 10px;
+      }
+      .ant-table-container, .ant-table-container table>thead>tr:first-child th:first-child {
+        border-top-left-radius: 2px;
+        font-size: 11px;
+    }
+      .vendor .criteria {
+        font-size: 12px;
+        font-weight: 500;
+    }
+    }
+  }
+}

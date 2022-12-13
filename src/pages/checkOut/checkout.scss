@@ -1,0 +1,27 @@
+.checkout-component {
+  .body {
+    padding: 15px 130px 15px 130px;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .checkout-component {
+    .body {
+      padding: 15px 50px;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+    .checkout-component {
+        .body {
+          padding: 15px 30px;
+        }
+      }
+}
+@media only screen and (max-width: 636px) {
+    .checkout-component {
+        .body {
+          padding: 15px 10px;
+        }
+      }
+}

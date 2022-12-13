@@ -1,0 +1,245 @@
+.buy-component {
+  .title {
+    display: flex;
+    justify-content: center;
+    height: 300px;
+
+    align-items: center;
+    .ant-typography {
+      font-size: 50px;
+      font-weight: 700;
+    }
+  }
+  .item {
+    height: 59px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgba(220, 231, 231, 0.32);
+    align-items: center;
+    padding: 0px 30px 0px 30px;
+    border-radius: 5px;
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+    border-style: solid hidden hidden hidden;
+    border-color: #fcb800;
+    .tick {
+      margin: 0px 10px;
+      color: #437814;
+    }
+    .ant-btn {
+      background-color: #437814;
+      border: #437814;
+      height: 40px;
+
+      color: white;
+      width: 130px;
+
+      font-size: 17px;
+      font-weight: 500;
+    }
+  }
+  .payment {
+    display: flex;
+    margin-top: 40px;
+    .address {
+      width: 100%;
+      .ant-btn {
+        background-color: #437814;
+        border: #437814;
+      }
+      .ant-input-number {
+        width: 100%;
+      }
+      .payment-method {
+        width: 95%;
+        border: 1px solid;
+        border-color: gray;
+        background-color: rgba(220, 231, 231, 0.32);
+        padding: 10px;
+        hr {
+          height: 0.5px;
+          color: rgba(156, 150, 150, 0.97);
+          background-color: rgba(156, 150, 150, 0.97);
+        }
+        .table {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 10px;
+
+          .right {
+            width: 40%;
+          }
+          .left {
+            width: 60%;
+          }
+        }
+
+        .note {
+          font-size: 12px;
+          margin: 0px 8px;
+        }
+      }
+      .ant-btn {
+        background-color: #437814;
+        border: #437814;
+        width: 96%;
+
+        margin-top: 25px;
+      }
+    }
+    .ant-col-10 {
+      margin-top: -14px;
+    }
+    .mode {
+      width: 40%;
+      justify-content: center;
+      padding-left: 15px;
+
+      .ant-btn {
+        background-color: #437814;
+        border: #437814;
+        height: 40px;
+
+        color: white;
+        width: 95%;
+
+        font-size: 17px;
+        font-weight: 500;
+        margin-top: 25px;
+      }
+    }
+  }
+}
+.ant-col-8 {
+  max-width: 100%;
+}
+.ant-modal-body {
+  background-color: rgb(220, 231, 231);
+}
+.paymentModal {
+  .table {
+    display: flex;
+
+    margin-top: 10px;
+
+    .right {
+      width: 60%;
+    }
+    .left {
+      width: 40%;
+    }
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .buy-component .title {
+    display: flex;
+    justify-content: center;
+    height: 250px;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .buy-component {
+    .title .ant-typography {
+      font-size: 45px;
+    }
+    h3.ant-typography {
+      font-size: 20px;
+    }
+    .ant-col-8 {
+      max-width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 920px) {
+  .buy-component {
+    .title {
+      height: 170px;
+      .ant-typography {
+        font-size: 40px;
+      }
+    }
+    .item .ant-btn {
+      height: 30px;
+      width: 130px;
+      font-size: 15px;
+    }
+  }
+  .paymentModal{
+    font-size: 12px;
+    line-height: 15px;
+    h3.ant-typography {
+      font-size: 20px;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .buy-component {
+    padding: 10px 30px;
+    .title {
+      height: 120px;
+      .ant-typography {
+        font-size: 35px;
+      }
+    }
+    .item {
+      padding: 0px 15px;
+      .ant-btn {
+        height: 27px;
+        width: 100px;
+        font-size: 11px;
+      }
+      p {
+        font-size: 11px;
+      }
+    }
+    .payment .address .payment-method {
+      width: 100%;
+    }
+    .payment .address .payment-method .table {
+      font-size: 12px;
+    }
+    .ant-form label {
+      font-size: 12px;
+    }
+    .note {
+      font-size: 12px;
+    }
+  }
+}
+
+@media only screen and (max-width: 551px) {
+  .buy-component {
+    padding: 10px;
+
+    h3.ant-typography {
+      font-size: 15px;
+    }
+  }
+}
+@media only screen and (max-width: 380px) {
+  .buy-component {
+    padding: 10px;
+
+    h3.ant-typography {
+      font-size: 15px;
+    }
+     .item {
+     height: auto;
+     padding: 5px;
+     flex-direction: column;
+     a {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+      .ant-btn {
+        width: 95%;
+      }
+
+  }
+  }
+}

@@ -1,0 +1,236 @@
+.footer {
+  padding: 40px 130px 15px 130px;
+  // position: relative;
+  width: 100%;
+  bottom: 0;
+
+  background-color: rgb(220 231 231 / 100%);
+
+  .news {
+    font-size: larger;
+    display: flex;
+    .info {
+      width: 50%;
+    }
+    .ant-btn-primary {
+      border-color: #437814;
+      background-color: #437814;
+    }
+    .ant-input-group {
+      width: 50%;
+      margin-top: 10px;
+      display: flex;
+      .ant-input {
+        height: 40px;
+      }
+      .ant-input:hover {
+        border-color: #437814;
+        border-right-width: 2px;
+      }
+
+      button {
+        height: 40px;
+      }
+    }
+    p {
+      font-size: 15px;
+      line-height: 0px;
+    }
+    hr {
+      color: rgb(35, 37, 35);
+      border-radius: 2px;
+    }
+  }
+  .communication {
+    display: flex;
+    justify-content: space-between;
+    .contact {
+      .ant-typography {
+        color: #437814;
+      }
+    }
+    p {
+      position: relative;
+      color: #3b3c3d;
+    }
+    p:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 1.5px;
+      bottom: 0;
+      left: 0;
+      background-color: #3b3c3d;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+
+    p:hover:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
+  .socialmedia {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    .icon {
+      display: flex;
+      width: 40%;
+      justify-content: space-evenly;
+      font-size: 18px;
+    }
+  }
+  .top {
+    background-color: #437814;
+    height: 40px;
+    width: 40px;
+    line-height: 4;
+    border-radius: 6px;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .footer {
+    padding: 15px 50px;
+    .news .ant-input-group {
+      width: 50%;
+      display: flex;
+    }
+  }
+}
+@media only screen and (max-width: 1299px) {
+  .footer {
+    .news .ant-input-group {
+      width: 50%;
+    }
+  }
+}
+
+@media only screen and (max-width: 989px) {
+  .footer .news .ant-input-group {
+    width: 50% !important;
+  }
+  .footer .news p {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 849px) {
+  .footer {
+    .news {
+      flex-wrap: wrap;
+      .ant-input-group {
+        width: 100% !important;
+      }
+      .info {
+        width: 100%;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 749px) {
+  .footer {
+    .communication {
+      .ant-typography {
+        font-size: 15px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .footer {
+    padding: 15px 30px;
+    .news {
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 451px) {
+  .footer {
+    .communication {
+      font-size: 11px;
+    }
+  }
+}
+@media only screen and (max-width: 389px) {
+  .footer {
+    padding: 15px 10px;
+
+    .ant-typography {
+      font-size: 14px;
+      line-height: 11px;
+    }
+    .news {
+      p {
+        font-size: 11px;
+      }
+      .ant-input-group .ant-input {
+        height: 30px;
+      }
+      .ant-input-group {
+        .ant-input {
+          height: 30px;
+        }
+        button {
+          height: 30px;
+        }
+      }
+    }
+    .communication {
+      .ant-typography {
+        font-size: 11px;
+      }
+      p {
+        margin-top: 15px;
+        margin-right: 2px;
+      }
+
+      font-size: 11px;
+    }
+    svg {
+      width: 9px;
+    }
+  }
+}
+@media only screen and (max-width: 339px) {
+  .footer {
+
+
+    .news {
+      p {
+        font-size: 9px;
+      }
+    }
+    .communication {
+     
+    
+      font-size: 9px;
+    }
+   
+  }
+
+}
+@media only screen and (max-width: 289px) {
+  .footer .news {
+    p {
+      font-size: 10px;
+    }
+    .ant-input-group button {
+      height: 30px;
+      font-size: 10px;
+    }
+  }
+  .communication {
+    p {
+      letter-spacing: 0px;
+      margin-top: 10px;
+      font-size: 8px;
+    }
+  }
+}
