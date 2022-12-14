@@ -5,7 +5,6 @@ import {
   createAction,
 } from "@reduxjs/toolkit";
 import { http, base } from "../http-common";
-import qs from "qs";
 
 const initialState = {
   admin: [],

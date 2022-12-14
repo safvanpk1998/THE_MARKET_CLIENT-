@@ -1,79 +1,80 @@
-  {
+{
     "name": "frontend",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
-      "@emotion/react": "^11.10.5",
-      "@emotion/styled": "^11.10.5",
-      "@expo-google-fonts/signika": "^0.2.2",
-      "@fontsource/signika": "^4.5.11",
-      "@fortawesome/fontawesome-svg-core": "^6.2.0",
-      "@fortawesome/react-fontawesome": "^0.2.0",
-      "@mui/material": "^5.10.13",
-      "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
-      "@reduxjs/toolkit": "^1.8.5",
-      "@testing-library/jest-dom": "^5.16.5",
-      "@testing-library/react": "^13.3.0",
-      "@testing-library/user-event": "^13.5.0",
-      "antd": "^4.23.3",
-      "axios": "^0.27.2",
-      "burger-menu": "^2.0.0",
-      "core-js-compat": "^3.4.7",
-      "dateformat": "^5.0.3",
-      "font-awesome": "^4.7.0",
-      "moment": "^2.29.4",
-      "overlay-navbar": "^1.2.3",
-      "query-string": "^7.1.1",
-      "react": "^18.2.0",
-      "react-burger-menu": "^3.0.8",
-      "react-countdown": "^2.3.2",
-      "react-dom": "^18.2.0",
-      "react-file-base64": "^1.0.3",
-      "react-helmet": "^6.1.0",
-      "react-horizontal-scrolling-menu": "^3.2.0",
-      "react-icons": "^4.6.0",
-      "react-image-magnifiers": "^1.4.0",
-      "react-lines-ellipsis": "^0.15.3",
-      "react-query-params": "^1.0.9",
-      "react-rating": "^2.0.5",
-      "react-redux": "^8.0.4",
-      "react-router-dom": "^6.4.1",
-      "react-scripts": "^5.0.1",
-      "react-star-rating-component": "^1.4.1",
-      "react-truncate-list": "^0.4.0",
-      "redux": "^4.2.0",
-      "redux-devtools-extension": "^2.13.9",
-      "redux-persist": "^6.0.0",
-      "redux-thunk": "^2.4.1",
-      "source-map-loader": "^4.0.0",
-      "use-query-params": "^2.1.2",
-      "web-vitals": "^2.1.4"
+        "@emotion/react": "^11.10.5",
+        "@emotion/styled": "^11.10.5",
+        "@expo-google-fonts/signika": "^0.2.2",
+        "@fontsource/signika": "^4.5.11",
+        "@fortawesome/fontawesome-svg-core": "^6.2.0",
+        "@fortawesome/react-fontawesome": "^0.2.0",
+        "@mui/material": "^5.10.13",
+        "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
+        "@reduxjs/toolkit": "^1.8.5",
+        "@testing-library/jest-dom": "^5.16.5",
+        "@testing-library/react": "^13.3.0",
+        "@testing-library/user-event": "^13.5.0",
+        "antd": "^4.23.3",
+        "axios": "^0.27.2",
+        "burger-menu": "^2.0.0",
+        "core-js-compat": "^3.4.7",
+        "dateformat": "^5.0.3",
+        "font-awesome": "^4.7.0",
+        "moment": "^2.29.4",
+        "overlay-navbar": "^1.2.3",
+        "qs": "^6.11.0",
+        "query-string": "^7.1.1",
+        "react": "^18.2.0",
+        "react-burger-menu": "^3.0.8",
+        "react-countdown": "^2.3.2",
+        "react-dom": "^18.2.0",
+        "react-file-base64": "^1.0.3",
+        "react-helmet": "^6.1.0",
+        "react-horizontal-scrolling-menu": "^3.2.0",
+        "react-icons": "^4.6.0",
+        "react-image-magnifiers": "^1.4.0",
+        "react-lines-ellipsis": "^0.15.3",
+        "react-query-params": "^1.0.9",
+        "react-rating": "^2.0.5",
+        "react-redux": "^8.0.4",
+        "react-router-dom": "^6.4.1",
+        "react-scripts": "^5.0.1",
+        "react-star-rating-component": "^1.4.1",
+        "react-truncate-list": "^0.4.0",
+        "redux": "^4.2.0",
+        "redux-devtools-extension": "^2.13.9",
+        "redux-persist": "^6.0.0",
+        "redux-thunk": "^2.4.1",
+        "source-map-loader": "^4.0.0",
+        "use-query-params": "^2.1.2",
+        "web-vitals": "^2.1.4"
     },
     "scripts": {
-      "start": "react-scripts start",
-      "build": "react-scripts build",
-      "test": "react-scripts test --env=jsdom",
-      "eject": "react-scripts eject"
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test --env=jsdom",
+        "eject": "react-scripts eject"
     },
     "eslintConfig": {
-      "extends": [
-        "react-app",
-        "react-app/jest"
-      ]
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
     },
     "browserslist": {
-      "production": [
-        ">0.2%",
-        "not dead",
-        "not op_mini all"
-      ],
-      "development": [
-        "last 1 chrome version",
-        "last 1 firefox version",
-        "last 1 safari version"
-      ]
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
     },
     "devDependencies": {
-      "sass": "^1.55.0"
+        "sass": "^1.55.0"
     }
-  }
+}
