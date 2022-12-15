@@ -11,6 +11,9 @@
 
   .ant-carousel {
     width: 97%;
+    .ant-carousel .slick-dots li button {
+      display: none !important;
+    }
     .slick-dots li.slick-active button {
       background: #437814;
       opacity: 1;
