@@ -217,7 +217,7 @@ function BasicDetails() {
                     imageSrc={data.image[0].url}
                     //  imageSrc={e.image[0].url}
 
-                    magnifierSize="80%"
+                    magnifierSize="130%"
                     allowOverflow="false"
                     style={{ width: "80%" }}
                   />
