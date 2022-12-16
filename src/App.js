@@ -41,14 +41,14 @@ function App() {
         {/* <Route exact path="/zzz" element={<ProductAdd></ProductAdd>}></Route> */}
 
         <Route exact path="/" element={<Home />}></Route>
-        <Route exact path="/login" element={<Auth></Auth>}></Route>
+        <Route  path="/login" element={<Auth></Auth>}></Route>
         <Route
-          exact
+          
           path="/createaccount"
           element={<CreateAccount></CreateAccount>}
         ></Route>
         <Route
-          exact
+          
           path="/electronics"
           element={<Product category={"Electronics"} />}
         ></Route>
