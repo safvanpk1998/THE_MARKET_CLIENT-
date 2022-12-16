@@ -17,6 +17,7 @@
     .slick-dots li.slick-active button {
       background: #437814;
       opacity: 1;
+      display: none !important;
     }
   }
   .slick-dots-bottom {
