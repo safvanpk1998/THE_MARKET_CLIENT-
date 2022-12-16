@@ -275,7 +275,7 @@ function BasicDetails() {
                 <div className="dealer">
                   <p>
                     <span className="brand"> Sold By : </span>
-                    <span className="name"> {data.soldBy.name}</span>
+                    {data.soldBy?<span className="name"> {data.soldBy.name}</span>:<></>}
                     <div className="vertical"></div>
                     <span className="brand"> Status : </span>
                     <span className="name">
