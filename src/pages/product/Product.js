@@ -78,6 +78,7 @@ function Product({section}) {
         <Footer></Footer>
 
         <Drawer
+        zIndex={10000}
         width={400}
         onClose={onClose}
         closable={false}

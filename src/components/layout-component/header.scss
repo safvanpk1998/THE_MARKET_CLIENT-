@@ -154,7 +154,7 @@
   .userdata {
     position: fixed;
     background: #f0f2f5;
-    z-index: 10000;
+    z-index: 2000;
     bottom: 0;
     // width: 100%;
     .login {
@@ -363,7 +363,7 @@
         left: 0;
         top: 0px;
         background: white;
-        z-index: 10000;
+        z-index: 2000;
         .ant-input-group-wrapper {
           margin-top: 15px;
         }
