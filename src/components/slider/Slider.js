@@ -74,6 +74,7 @@ function Slider({ heading, timer, keyword }) {
                           <div className="product-card">
                             <div>
                               {/* <img src={speaker} alt="" /> */}
+                              {e.image.length>0?<img src={e.image[0].url} alt="product Image" />:<></>}
                               {/* <img src={e.image[0].url} alt="product Image" /> */}
                             </div>
                           </div>
