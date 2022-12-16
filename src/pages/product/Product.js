@@ -79,7 +79,7 @@ function Product({section}) {
 
         <Drawer
         zIndex={10000}
-        width={400}
+        width={280}
         onClose={onClose}
         closable={false}
         open={open}
