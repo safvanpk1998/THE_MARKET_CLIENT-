@@ -210,7 +210,7 @@ function BasicDetails() {
           <div className="image">
             <div className="pics"></div>
             <div className="enlarge">
-              {data.image.length > 0 ? (
+              {productDetail && data&&data.image.length > 0 ? (
                 <MagnifierContainer>
                   <GlassMagnifier
                     imageSrc={data.image[0].url}
