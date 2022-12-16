@@ -222,7 +222,7 @@ function BasicDetails() {
                   />
                 </MagnifierContainer>
               ) : (
-                <></>
+                <>image not found</>
               )}
             </div>
             <div className="title-Screen">
