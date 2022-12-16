@@ -207,6 +207,7 @@ function BasicDetails() {
         <hr></hr>
 
         <div className="summary">
+        {productDetail && data ? (
           <div className="image">
             <div className="pics"></div>
             <div className="enlarge">
@@ -251,7 +252,11 @@ function BasicDetails() {
                 <p>Inclusive of all taxes</p>
               </div>
             </div>
-          </div>
+          </div>): (
+            <>
+              <Skeleton active />
+            </>
+          )}
           {productDetail && data ? (
             <div className="details">
               <div className="title">
