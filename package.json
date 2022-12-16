@@ -76,6 +76,7 @@
         ]
     },
     "devDependencies": {
+        "html-webpack-plugin": "^5.5.0",
         "sass": "^1.55.0",
         "webpack": "^5.75.0",
         "webpack-dev-middleware": "^6.0.1",
