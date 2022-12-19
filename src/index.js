@@ -17,7 +17,7 @@ root.render(
  <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
       
-    <Router>
+    <Router basename="/THE_MARKET_CLIENT-">
     <App />
   </Router>
   </PersistGate>
