@@ -78,9 +78,12 @@
     "devDependencies": {
         "html-webpack-plugin": "^5.5.0",
         "sass": "^1.55.0",
-        "webpack": "^5.75.0",
+        "webpack": "4.44.2",
         "webpack-dev-middleware": "^6.0.1",
         "webpack-dev-server": "^4.11.1",
         "webpack-hot-middleware": "^2.25.3"
+    },
+    "resolutions": {
+        "webpack": "4.44.2"
     }
 }
