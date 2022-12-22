@@ -109,13 +109,12 @@ function Filter() {
   const navigate = useNavigate();
   const { pathname } = location;
   let type=window.location.pathname.substr(1,)
-
+  const [rating, setRating] = useState(1);
 
 
   const params = new URLSearchParams(location.search);
 
   const [subCategory, setSubCategory] = useState(" ");
-  const [ratings, setRatings] = useState(" ");
   const [offer, setOffer] = useState(0);
   const [price, setPrice] = useState();
 
@@ -185,11 +184,12 @@ function Filter() {
       brand: brand,
       offer: offer,
       amountPayable: price,
+      ratings:rating
     };
     console.log(typeof section, "euiwu");
     console.log(data, "cbewugfy");
     dispatch(getfilterdProduct(data));
-  }, [subCategory, brand, pathname, offer, price, category]);
+  }, [subCategory, brand, pathname, offer, price, category,rating]);
 
   return (
     <>
@@ -250,11 +250,8 @@ function Filter() {
 
             <div className="rating">
               <Title level={5}> Customer Rating</Title>
-              <Rate disabled defaultValue={1} />
-              <Rate disabled defaultValue={2} />
-              <Rate disabled defaultValue={3} />
-              <Rate disabled defaultValue={4} />
-              <Rate disabled defaultValue={5} />
+              <Rate defaultValue={1} onChange={setRating} value={rating} />
+
             </div>
           </div>
         </div>

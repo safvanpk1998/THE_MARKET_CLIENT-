@@ -61,11 +61,10 @@ export const getfilterdProduct = createAsyncThunk(
         price[1] = 100000;
       }
     }
-    console.log(data,"datattta")
     if(data.keyword){
       const response = await http.get(
      
-        `/products?${data.subCategory}&${data.brand}&offer[gte]=${data.offer}&amountPayable[gte]=${price[0]}&amountPayable[lte]=${price[1]}&keyword=${data.keyword}`
+        `/products?${data.subCategory}&${data.brand}&offer[gte]=${data.offer}&ratings[gte]=${data.ratings}&amountPayable[gte]=${price[0]}&amountPayable[lte]=${price[1]}&keyword=${data.keyword}`
       );
       return response.data;
         
@@ -73,7 +72,7 @@ export const getfilterdProduct = createAsyncThunk(
     if(data.soldBy){
       const response = await http.get(
      
-        `/products?${data.subCategory}&${data.brand}&offer[gte]=${data.offer}&amountPayable[gte]=${price[0]}&amountPayable[lte]=${price[1]}&soldBy=${data.soldBy}`
+        `/products?${data.subCategory}&${data.brand}&offer[gte]=${data.offer}&ratings[gte]=${data.ratings}&amountPayable[gte]=${price[0]}&amountPayable[lte]=${price[1]}&soldBy=${data.soldBy}`
       );
       return response.data;
         
@@ -81,7 +80,7 @@ export const getfilterdProduct = createAsyncThunk(
     if(data.type){
       const response = await http.get(
      
-        `/products?${data.subCategory}&${data.brand}&offer[gte]=${data.offer}&amountPayable[gte]=${price[0]}&amountPayable[lte]=${price[1]}&category=${data.type}`
+        `/products?${data.subCategory}&${data.brand}&offer[gte]=${data.offer}&ratings[gte]=${data.ratings}&amountPayable[gte]=${price[0]}&amountPayable[lte]=${price[1]}&category=${data.type}`
       );
       return response.data;
         
