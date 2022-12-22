@@ -25,7 +25,7 @@ function Product({section}) {
   const [open, setOpen] = useState(false);
 
   const dispatch = useDispatch();
-  const {products,filteredProductsCount} = useSelector((state) => state.products);
+  const {products,filteredProductsCount, productLoading} = useSelector((state) => state.products);
   const data = products;
   
 
@@ -71,7 +71,7 @@ function Product({section}) {
             
             </div>
             <div className="filter-model"> <Button onClick={showDrawer} >Apply Filters<FaFilter></FaFilter></Button></div>
-           <ProductCard data={data} count={filteredProductsCount}></ProductCard>
+           <ProductCard data={data} count={filteredProductsCount} loading={productLoading}></ProductCard>
            
           
         </div>

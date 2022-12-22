@@ -172,6 +172,7 @@ const productSlice = createSlice({
       return {
         ...state,
         loading: true,
+        productLoading: true,
         products: [],
       };
     },
@@ -180,6 +181,7 @@ const productSlice = createSlice({
       return {
         ...state,
         loading: false,
+        productLoading:false,
         products: action.payload.products,
         productCount: action.payload.productCount,
         resultPerPage: action.payload.resultPerPage,
@@ -191,6 +193,7 @@ const productSlice = createSlice({
       console.log(action.error);
       return {
         loading: false,
+        productLoading:false,
         error: action.error,
       };
     },
@@ -226,6 +229,7 @@ const productSlice = createSlice({
       return {
         ...state,
         error: null,
+        productLoading:false,
         reviewAdded:null
       };
     },

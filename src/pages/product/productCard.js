@@ -11,9 +11,14 @@ import jbl from "../../assets/images/jbl.png";
 import toy from "../../assets/images/toy.png";
 const { Title } = Typography;
 
-function ProductCard({data,count}) {
+function ProductCard({data,count,loading}) {
   return (
-    <div className="PoductDetails">
+    <>
+    {loading?<div class="loader">
+  <div class="outer"></div>
+  <div class="middle"></div>
+  <div class="inner"></div>
+</div>: <div className="PoductDetails">
       {data &&count>0?
       <div className="productWrapper">
       
@@ -67,6 +72,8 @@ function ProductCard({data,count}) {
     }
   />}
     </div>
+}
+   </>
   );
 }
 
