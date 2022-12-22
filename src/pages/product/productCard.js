@@ -13,12 +13,7 @@ const { Title } = Typography;
 
 function ProductCard({data,count,loading}) {
   return (
-    <>
-    {loading?<div class="loader">
-  <div class="outer"></div>
-  <div class="middle"></div>
-  <div class="inner"></div>
-</div>: <div className="PoductDetails">
+    <div className="PoductDetails">
       {data &&count>0?
       <div className="productWrapper">
       
@@ -72,8 +67,7 @@ function ProductCard({data,count,loading}) {
     }
   />}
     </div>
-}
-   </>
+
   );
 }
 

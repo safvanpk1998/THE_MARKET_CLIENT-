@@ -52,6 +52,7 @@ const productDetailSlice = createSlice({
     [getProductDeatails.pending]: (state, action) => {
       return {
         loading: true,
+        details:true,
         ...state,
       };
     },
@@ -60,6 +61,7 @@ const productDetailSlice = createSlice({
       return {
         ...state,
         loading: false,
+        details:false,
         productDetails: action.payload,
         singleProduct:true
       };
@@ -69,6 +71,7 @@ const productDetailSlice = createSlice({
       console.log(action.error);
       return {
         loading: false,
+        details:false,
         error: action.error,
       };
     },
@@ -102,6 +105,7 @@ const productDetailSlice = createSlice({
       return {
         ...state,
         error: null,
+        details:false
       };
     },
   },
