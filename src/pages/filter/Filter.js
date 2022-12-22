@@ -109,7 +109,7 @@ function Filter() {
   const navigate = useNavigate();
   const { pathname } = location;
   let type=window.location.pathname.substr(1,)
-  const [rating, setRating] = useState(1);
+  const [rating, setRating] = useState(0);
 
 
   const params = new URLSearchParams(location.search);
@@ -250,7 +250,7 @@ function Filter() {
 
             <div className="rating">
               <Title level={5}> Customer Rating</Title>
-              <Rate defaultValue={1} onChange={setRating} value={rating} />
+              <Rate defaultValue={0} onChange={setRating} value={rating} />
 
             </div>
           </div>
