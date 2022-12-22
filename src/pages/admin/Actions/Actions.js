@@ -409,7 +409,15 @@ function Actions() {
                       },
                     ]}
                   >
-                    <Input></Input>
+                   <Select>
+                      <Option value="Music">Music</Option>
+                      <Option value="Speaker">Speaker</Option>
+                      <Option value="SmartPhone">SmartPhone</Option>
+                      <Option value="KeypadPhone">KeypadPhone</Option>
+                      <Option value="HeadPhone">HeadPhone</Option>
+                      <Option value="beard">Beard</Option>
+                      <Option value="teddy">Teddy</Option>
+                    </Select>
                   </Form.Item>
                   <Form.Item
                     label="Gender"

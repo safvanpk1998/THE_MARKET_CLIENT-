@@ -24,11 +24,21 @@ function Slider({ heading, timer, keyword }) {
   const [productData, setProductData] = useState();
 
   useEffect(() => {
-    dispatch(getProduct(keyword));
-    http.get(`/products?keyword=${keyword}`).then((response) => {
-      setProductData(response.data);
-      console.log(response.data, keyword);
-    });
+ if(timer){
+  http.get(`/product?offer[gte]=30&offer[lte]=75&ratings[gte]=4`).then((response) => {
+    setProductData(response.data);
+
+  });
+
+ }
+ else{
+  http.get(`/products?keyword=${keyword}`).then((response) => {
+    setProductData(response.data);
+
+  });
+
+ }
+   
   }, []);
 
   // useEffect(() => {

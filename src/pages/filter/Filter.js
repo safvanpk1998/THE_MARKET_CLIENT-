@@ -24,19 +24,29 @@ import Header from "../../components/layout-component/header";
 import { getfilterdProduct } from "../../slices/productSlice";
 const { Title } = Typography;
 
+
+
 const category = [
   {
-    label: "desktop PC",
-    value: "DesktopPC",
+    label: "Speaker",
+    value: "Speaker",
   },
   {
-    value: "Laptop",
+    value: "Speaker",
   },
   {
-    value: "SmartPhone",
+    value: "KeypadPhone",
   },
   {
-    value: "Tablet",
+    value: "HeadPhone",
+  },
+  {
+    label: "Beard",
+    value: "beard",
+  },
+  {
+    label: "Teddy",
+    value: "teddy",
   },
 ];
 const Brand = [
