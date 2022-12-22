@@ -388,12 +388,14 @@ function Actions() {
                     ]}
                   >
                     <Select>
-                      <Option value="Electronics">Electronics</Option>
+                      <Option value="electronics">Electronics</Option>
                       <Option value="books">Books</Option>
                       <Option value="mobiles">Mobiles</Option>
                       <Option value="homeAppliances">Home Appliances</Option>
                       <Option value="books">Books</Option>
                       <Option value="buety">Buety</Option>
+                      <Option value="sports">Sports</Option>
+                      <Option value="healthcare">Health care</Option>
                       <Option value="toys">Toys</Option>
                     </Select>
                   </Form.Item>

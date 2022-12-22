@@ -24,21 +24,9 @@ function Slider({ heading, timer, keyword }) {
   const [productData, setProductData] = useState();
 
   useEffect(() => {
- if(timer){
-  http.get(`/product?offer[gte]=30&offer[lte]=75&ratings[gte]=4`).then((response) => {
-    setProductData(response.data);
-
-  });
-
- }
- else{
-  http.get(`/products?keyword=${keyword}`).then((response) => {
-    setProductData(response.data);
-
-  });
-
- }
-   
+    http.get(`/products?${keyword}`).then((response) => {
+      setProductData(response.data);
+    });
   }, []);
 
   // useEffect(() => {
@@ -68,7 +56,7 @@ function Slider({ heading, timer, keyword }) {
         />
       </div>
       <div className="product-scroll">
-        {productData && productData.products? (
+        {productData && productData.products ? (
           <>
             {productData.products?.map((e) => {
               return (
@@ -84,7 +72,11 @@ function Slider({ heading, timer, keyword }) {
                           <div className="product-card">
                             <div>
                               {/* <img src={speaker} alt="" /> */}
-                              {e.image.length>0?<img src={e.image[0].url} alt="product Image" />:<></>}
+                              {e.image.length > 0 ? (
+                                <img src={e.image[0].url} alt="product Image" />
+                              ) : (
+                                <></>
+                              )}
                               {/* <img src={e.image[0].url} alt="product Image" /> */}
                             </div>
                           </div>
