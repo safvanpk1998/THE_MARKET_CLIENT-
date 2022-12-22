@@ -22,8 +22,8 @@ function Home() {
         <Slider heading="Electronics" keyword={"category=electronics"}></Slider>
         <Slider heading="Mobiles" keyword={"category=mobiles"}></Slider>
         <Slider heading="Home & Kitchen Essentials" keyword={"category=homeAppliances"}></Slider>
-        <Slider heading="Sports, Healthcare & more" keyword={"category=healthcare&category=sports&"}></Slider>
-        <Slider heading="Beauty, Food, Toys & more" keyword={"category=buety"}></Slider>
+        <Slider heading="Sports, Healthcare & more" keyword={"category=healthcare&category=sports"}></Slider>
+        <Slider heading="Beauty, Food, Toys & more" keyword={"category=buety&category=toys"}></Slider>
       
         <Footer></Footer>
         
