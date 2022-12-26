@@ -25,10 +25,6 @@ import { getProduct } from "../../slices/productSlice";
 import Loading from "../../components/loadin";
 
 function Product({ section }) {
-  const [subCategory, setSubCategory] = useState("");
-  const [ratings, setRatings] = useState("");
-  const [brand, setbrand] = useState("");
-  const [amountPayable, setAmountPayable] = useState("");
   const [open, setOpen] = useState(false);
 
   const dispatch = useDispatch();
@@ -37,10 +33,9 @@ function Product({ section }) {
   );
   const data = products;
 
-  const currentPage = "";
-  const price = "";
+
   let category = "";
-  let path = "";
+
 
   if (section) {
     category = section;
@@ -61,9 +56,9 @@ function Product({ section }) {
       <Header></Header>
 
       <>
-        {productLoading ? (
+        {/* {productLoading ? (
          <Loading></Loading>
-        ) : (
+        ) : ( */}
           <div className="pages">
             <div className="filter-withscreen">
               <Filter category={category}></Filter>
@@ -84,7 +79,7 @@ function Product({ section }) {
               loading={productLoading}
             ></ProductCard>
           </div>
-        )}
+        {/* )} */}
       </>
       <Footer></Footer>
 

@@ -11,7 +11,7 @@ import jbl from "../../assets/images/jbl.png";
 import toy from "../../assets/images/toy.png";
 const { Title } = Typography;
 
-function ProductCard({data,count,loading}) {
+function ProductCard({data,count}) {
   return (
     <div className="PoductDetails">
       {data &&count>0?
