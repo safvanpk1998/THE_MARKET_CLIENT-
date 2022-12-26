@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const http = axios.create({
-  baseURL: "https://themarket.onrender.com/api/v1",
+  baseURL: "http://localhost:4000/api/v1/",
   headers: {
     "Content-type": "application/json",
   },
