@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate, Navigate } from "react-router-dom";
+import { Link, useNavigate, Navigate, BrowserRouter } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import { CookiesProvider } from 'react-cookie';
+import { useCookies } from 'react-cookie';
 import { loadUser, logoutUser, clearAuthError } from "../../slices/authSlice";
 import "@fontsource/signika";
 import "./header.scss";
@@ -115,7 +117,10 @@ function Header() {
   };
   const handleLogout = () => {
     dispatch(logoutUser());
+   document.cookie="token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
     message.success("Successfully logged out");
+    
     
     navigate("/");
   };
