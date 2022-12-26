@@ -9,9 +9,10 @@ import speaker from "../../assets/images/speaker.png";
 import kitchen from "../../assets/images/kitchen.png";
 import jbl from "../../assets/images/jbl.png";
 import toy from "../../assets/images/toy.png";
+import Loading from "../../components/loadin";
 const { Title } = Typography;
 
-function ProductCard({data,count}) {
+function ProductCard({data,count,loading}) {
   return (
     <div className="PoductDetails">
       {data &&count>0?
@@ -20,6 +21,9 @@ function ProductCard({data,count}) {
         {data?.map((e) => {
           return (
             <>
+             {loading ? (
+      <Loading></Loading>
+        ) : (
             <Col className="col" key={e._id}>
               <Link
                 key={e._id}
@@ -49,6 +53,7 @@ function ProductCard({data,count}) {
                 </Card></Badge.Ribbon>
               </Link>
             </Col>
+           )}
            
             </>
           );

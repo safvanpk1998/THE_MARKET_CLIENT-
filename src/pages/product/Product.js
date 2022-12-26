@@ -79,7 +79,7 @@ function Product({ section }) {
               loading={productLoading}
             ></ProductCard>
           </div>
-        {/* )} */}
+      
       </>
       <Footer></Footer>
 
