@@ -125,7 +125,7 @@ function BasicDetails() {
 
   return (
     <>
-      {loading ? (
+      {loading ||details ? (
         <Loading></Loading>
       ) : (
         <div className="BasicDetails">
