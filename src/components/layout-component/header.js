@@ -44,6 +44,7 @@ import {
   FaUserShield,
   FaBox,
   FaCogs,
+  FaCookie,
 } from "react-icons/fa";
 import phone from "../../assets/others/images.jpg";
 import electronics from "../../assets/others/laptop.jpg";
@@ -115,6 +116,7 @@ function Header() {
   const handleLogout = () => {
     dispatch(logoutUser());
     message.success("Successfully logged out");
+    
     navigate("/");
   };
   let id = "";

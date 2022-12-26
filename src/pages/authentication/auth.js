@@ -1,26 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  Menu,
-  Input,
-  Space,
-  Typography,
-  InputNumber,
-  Button,
-  Alert,
-  message,
-  Rate,
-  Tabs,
-  Table,
-  Checkbox,
-  Form,
-} from "antd";
+import { Input, Typography, InputNumber, Button, message, Form } from "antd";
 import { LockOutlined, UserOutlined, MailOutlined } from "@ant-design/icons";
 import {
   loginUser,
   loadUser,
-  
   getPasswordResettingOtp,
   postConfirmOtp,
   postResetPassword,
@@ -57,7 +42,7 @@ function Auth() {
   const getOtp = (values) => {
     setEmail(values.email);
     setOtp(true);
-    setResetpage(false)
+    setResetpage(false);
 
     dispatch(getPasswordResettingOtp(values));
   };
@@ -66,7 +51,7 @@ function Auth() {
       ...values,
       email: email,
     };
-    setVerifyOtp(true)
+    setVerifyOtp(true);
     dispatch(postConfirmOtp(values));
   };
   const resetPassword = (values) => {
@@ -81,13 +66,11 @@ function Auth() {
     setForgotPassword(false);
     setOtp(false);
     setVerifyOtp(false);
-    setResetpage(false)
-
+    setResetpage(false);
   };
   const ForgotPassword = () => {
     setForgotPassword(true);
-    setResetpage(true)
-
+    setResetpage(true);
   };
 
   useEffect(() => {
@@ -107,8 +90,7 @@ function Auth() {
       <div className="main">
         <div className="login">
           <div className="wrapper">
-            {
-            (resetpage) ? (
+            {resetpage ? (
               <div>
                 {" "}
                 <div className="title">
@@ -177,7 +159,7 @@ function Auth() {
                 </div>
               </div>
             ) : null}
-            { !forgotPassword ? (
+            {!forgotPassword ? (
               <div>
                 {" "}
                 <div className="title">
@@ -263,8 +245,7 @@ function Auth() {
               </div>
             ) : null}
 
-            {
-            reset ==true && forgotPassword && otp? (
+            {reset == true && forgotPassword && otp ? (
               <div>
                 {" "}
                 <div className="title">
@@ -327,8 +308,7 @@ function Auth() {
               </div>
             ) : null}
 
-            {reset == "confirmed"  && forgotPassword&&verifyOtp ?
-           (
+            {reset == "confirmed" && forgotPassword && verifyOtp ? (
               <div>
                 {" "}
                 <div className="title">
