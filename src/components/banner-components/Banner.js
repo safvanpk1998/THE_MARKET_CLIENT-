@@ -1,8 +1,14 @@
+
+/**
+ * 
+ * author: safvan
+ * 
+ */
+
 import React, { useRef } from "react";
 import "./banner.scss";
 import { Carousel, Typography, Button } from "antd";
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
-import { LeftSquareFilled, RightSquareFilled } from "@ant-design/icons";
 import speaker from "../../assets/images/speaker.png";
 import kitchen from "../../assets/images/kitchen.png";
 import jbl from "../../assets/images/jbl.png";

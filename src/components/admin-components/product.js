@@ -1,47 +1,55 @@
+
+
+/**
+ * 
+ * author: safvan
+ * discription: view and update product data
+ * 
+ */
 import React, { useState, useEffect } from "react";
 
 import {
-  Typography,
   InputNumber,
   Button,
-  Rate,
   Tooltip,
-  Tabs,
   Table,
   Popconfirm,
-  Menu,
   Input,
   message,
   Space,
   Select,
-  Badge,
-  Tag,
   Modal,
-  Popover,
   Form,
-  Upload,
 } from "antd";
 
 import { FaEdit, FaEye, FaTrash } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
 
+import {
+  deleteProduct,
+  getProduct,
+  getStockers,
+  updateproduct,
+} from "../../utils/adminApi";
 
-import { deleteProduct, getProduct, getStockers, updateproduct } from "../../utils/adminApi";
-
-const { Title } = Typography;
 const { TextArea } = Input;
 const { Option } = Select;
 
 function ProductDetails() {
-
-
+  //current page number
   const [current, setCurrent] = useState(1);
 
-  const [limit, setLimit] = useState(10);
-  const [total, setTotal] = useState(10);
-    const [traders, setTraders] = useState([]);
+  //number of products per page
 
+  const [limit, setLimit] = useState(10);
+
+  //total number of products
+
+  const [total, setTotal] = useState(10);
+  const [traders, setTraders] = useState([]);
+
+  //delete product permenantly
 
   const deleteSelectedProduct = async (id) => {
     const items = await deleteProduct(id);
@@ -55,14 +63,14 @@ function ProductDetails() {
     }
   };
 
-  const handlePage=(current,limit)=>{
-    setCurrent(current)
-    setLimit(limit)
-    console.log(limit,current,"current page")
-    getAllProduct(current,limit)
+  //jumb to another page
 
-
-  }
+  const handlePage = (current, limit) => {
+    setCurrent(current);
+    setLimit(limit);
+    console.log(limit, current, "current page");
+    getAllProduct(current, limit);
+  };
 
   const [productModalOpen, setProductModalOpen] = useState(false);
   const [avatar, setAvatar] = useState();
@@ -90,25 +98,22 @@ function ProductDetails() {
 
   //product data editor model
 
-  const showProductModal =async (data) => {
-    const response=await getStockers()
-    
+  const showProductModal = async (data) => {
+    const response = await getStockers();
+
     if (response.error) {
       message.error("Something went wrong");
     } else {
       setTraders(response.stockers);
     }
-      
-       setupdateProductData(data)
-        
-      
-    
-    console.log(data,"modal")
-   
-    
+
+    setupdateProductData(data);
+
+    console.log(data, "modal");
+
     setProductModalOpen(true);
 
-    console.log(updateProductData,"afterup");
+    console.log(updateProductData, "afterup");
   };
 
   const registerimage = (e) => {
@@ -133,7 +138,7 @@ function ProductDetails() {
     form.resetFields();
   };
   const onFinish = (values) => {
-    setSpinning(true)
+    setSpinning(true);
     let productId = updateProductData._id;
     values.image = avatar;
     values.id = productId;
@@ -261,16 +266,16 @@ function ProductDetails() {
       ),
     },
   ];
-  const getAllProduct = async (current,limit) => {
-    const items = await getProduct(current,limit);
-    setTotal(items.filterdProductCount)
+  const getAllProduct = async (current, limit) => {
+    const items = await getProduct(current, limit);
+    setTotal(items.filterdProductCount);
     setProductData(
       items.products.map((data) => ({
         name: data.name,
         image: data.image[0].url,
         rate: data.price,
         id: data._id,
-        soldBy: data.soldBy.name||"newDelhi Collections",
+        soldBy: data.soldBy.name || "newDelhi Collections",
         offer: data.offer,
         brand: data.brand,
         stock: data.stock,
@@ -284,28 +289,26 @@ function ProductDetails() {
   };
 
   useEffect(() => {
-    getAllProduct(current,limit);
-    console.log(updateProductData)
+    getAllProduct(current, limit);
+    console.log(updateProductData);
   }, []);
 
   return (
-    <div >
+    <div>
       <div>
-      
-            <Table
-              dataSource={productData}
-              columns={productColumns}
-              pagination={{
-                pageSize:limit,
-                current:current,
-                total:total,
-                onChange:(current,limit)=>{handlePage(current,limit)},
-           
-              
-              }}
-              scroll={{ x: 1500 }}
-            />
-         
+        <Table
+          dataSource={productData}
+          columns={productColumns}
+          pagination={{
+            pageSize: limit,
+            current: current,
+            total: total,
+            onChange: (current, limit) => {
+              handlePage(current, limit);
+            },
+          }}
+          scroll={{ x: 1500 }}
+        />
       </div>
       <Modal
         title="Update Product"
@@ -461,23 +464,22 @@ function ProductDetails() {
               </Form.Item>
             </div>
             <div className="form">
-            <Form.Item
-                      label="Seller"
-                      name="soldBy"
-                      rules={[
-                        {
-                          required: true,
-                          message: "Please select seller!",
-                        },
-                      ]}
-                    >
-                      <Select>
-                        {traders.map((trader) => (
-                          <Option value={trader._id}>{trader.name}</Option>
-                        ))}
-                      
-                      </Select>
-                    </Form.Item>
+              <Form.Item
+                label="Seller"
+                name="soldBy"
+                rules={[
+                  {
+                    required: true,
+                    message: "Please select seller!",
+                  },
+                ]}
+              >
+                <Select>
+                  {traders.map((trader) => (
+                    <Option value={trader._id}>{trader.name}</Option>
+                  ))}
+                </Select>
+              </Form.Item>
               <Form.Item
                 label="Upload"
                 name="image"

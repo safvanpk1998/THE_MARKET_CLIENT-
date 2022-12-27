@@ -1,16 +1,30 @@
+/**
+ * 
+ * author: safvan
+ * 
+ */
+
+
 import React, { useState, useEffect } from "react";
+
 import "./homePoster.scss";
+
 import { Typography, Carousel } from "antd";
 
 import iphone from "../../../assets/images/iphone.png";
+
 import pan from "../../../assets/images/pan.png";
+
 import shave from "../../../assets/images/shave.png";
+
 const { Title } = Typography;
 
 function Homeposter() {
+
   const [screen, setScreen] = useState(false);
 
   //choose the screen size
+
   const handleResize = () => {
     if (window.innerWidth > 380) {
       setScreen(true);
@@ -18,6 +32,10 @@ function Homeposter() {
       setScreen(false);
     }
   };
+
+  //poster apperance settings based on screen size
+
+  
   window.addEventListener("resize", handleResize);
   useEffect(() => {
     window.addEventListener("resize", handleResize);

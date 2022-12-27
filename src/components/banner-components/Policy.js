@@ -1,3 +1,11 @@
+
+
+/**
+ * 
+ * author: safvan
+ * 
+ */
+
 import React,{useState} from "react";
 import { FaRocket ,FaUndoAlt ,FaWallet,FaComments} from "react-icons/fa";
 import { Typography } from "antd";

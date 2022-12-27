@@ -1,16 +1,16 @@
+
+/**
+ * 
+ * author: safvan
+ * discription: view and update order data
+ * 
+ */
 import React, { useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
 import {
-  Typography,
-  InputNumber,
   Button,
-  Rate,
   Tooltip,
-  Tabs,
   Table,
   Popconfirm,
-  Menu,
-  Input,
   message,
   Space,
   Select,
@@ -18,7 +18,7 @@ import {
   Form,
 } from "antd";
 
-import { FaEdit, FaEye, FaTrash } from "react-icons/fa";
+import { FaEdit, FaTrash } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
 
@@ -28,14 +28,17 @@ import {
   updateOrderStatus,
 } from "../../utils/adminApi";
 
-const { Title } = Typography;
-const { TextArea } = Input;
 const { Option } = Select;
 
 function Order() {
+  //current page number
   const [current, setCurrent] = useState(1);
 
+  //page limit
   const [limit, setLimit] = useState(10);
+
+  //total number of order
+
   const [total, setTotal] = useState(10);
 
   //delete order
@@ -62,11 +65,13 @@ function Order() {
 
   const [form] = Form.useForm();
 
+  //form submission error
+
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
 
-  //order role editer model
+  //delivry status updation
 
   const updateStatus = async (data) => {
     let id = order._id;
@@ -91,6 +96,8 @@ function Order() {
       }, 1000);
     }
   };
+
+  //delivery status model open
 
   const showstatusModal = (data) => {
     console.log(data);
@@ -217,7 +224,7 @@ function Order() {
       setStatusModalOpen(false);
       message.error("Something went wrong");
     } else {
-        setTotal(response.filterdOrderCount)
+      setTotal(response.filterdOrderCount);
       setOrderData(
         response.orders.map((data) => ({
           name: data.orderItems.name,

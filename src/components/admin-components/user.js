@@ -1,10 +1,15 @@
+/**
+ * author :safvan p k
+ * discription: view and edit the users list and update user role
+ * 
+ */
+
+
 import React, { useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import {
-  Typography,
   Button,
   Tooltip,
-  Tabs,
   Table,
   Popconfirm,
   message,
@@ -20,15 +25,14 @@ import { Link } from "react-router-dom";
 import {
   deleteUser,
   getAllUserDatas,
-  getProduct,
   updateUserRoles,
 } from "../../utils/adminApi";
 
-const { Title } = Typography;
 
 const { Option } = Select;
 
 function UserDetails() {
+
   const [userId, setuserId] = useState();
 
   const [userModalOpen, setUserModalOpen] = useState(false);
@@ -46,11 +50,14 @@ function UserDetails() {
 
   const {} = useSelector((state) => state.admin);
 
+  //delete user 
 
   const eliminateUser = (id) => {
     removeUser(id);
   };
   
+
+  //update user role(admin,user,employ etc.)
 
   const updateUserRol = async (id, data) => {
     const items = await updateUserRoles(id, data);
