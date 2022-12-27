@@ -68,7 +68,6 @@ const productDetailSlice = createSlice({
     },
 
     [getProductDeatails.rejected]: (state, action) => {
-      console.log(action.error);
       return {
         loading: false,
         details:false,
@@ -95,7 +94,6 @@ const productDetailSlice = createSlice({
     },
 
     [getReview.rejected]: (state, action) => {
-      console.log(action.error);
       return {
         loading: false,
         error: action.error,

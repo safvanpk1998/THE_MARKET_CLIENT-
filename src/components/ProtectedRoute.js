@@ -1,11 +1,8 @@
 import React, { Fragment, useEffect } from "react";
-import { useSelector } from "react-redux";
 import UseAuth from "../utils/useAuth"
 
 import {
-  Routes,
-  Route,
-  Link,
+
   Navigate,
   Outlet,
   useLocation,

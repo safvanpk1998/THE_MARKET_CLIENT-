@@ -103,14 +103,12 @@ function UserDetails() {
   const handlePage=(current,limit)=>{
     setCurrent(current)
     setLimit(limit)
-    console.log(limit,current,"current page")
     getAllUsers(current,limit)
 
 
   }
 
   const onFinishFailed = (errorInfo) => {
-    console.log("Failed:", errorInfo);
   };
 
   const updaterole = (data) => {

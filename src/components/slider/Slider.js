@@ -1,21 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
 import { Typography, Card, Col, Rate, Badge, Skeleton } from "antd";
 import Countdown from "react-countdown";
 import { ScrollMenu } from "react-horizontal-scrolling-menu";
 import { FaRupeeSign } from "react-icons/fa";
-import { getProduct } from "../../slices/productSlice";
 import "./slider.scss";
 import { http } from "../../http-common";
 
 const { Title } = Typography;
 
 function Slider({ heading, timer, keyword }) {
-  const dispatch = useDispatch();
 
-  // const currentPage = "";
-  // const price = "";
   if (keyword) {
     keyword = keyword;
   } else {
@@ -29,11 +24,6 @@ function Slider({ heading, timer, keyword }) {
     });
   }, []);
 
-  // useEffect(() => {
-  //   dispatch(getProduct(keyword, currentPage, price));
-  //   // setProductData(products)
-
-  // }, [dispatch,products.productCount]);
   return (
     <div className="slider">
       <div className="header">

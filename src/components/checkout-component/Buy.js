@@ -72,7 +72,7 @@ function Buy() {
     if (value == "cashOnDelivery") {
 
       dispatch(createOrder(userDetails));
-      
+
     } else {
       const {
         data: { key },
@@ -104,7 +104,6 @@ function Buy() {
             message.success("order placed Successfully");
             navigate(`/success/${id}`);
           } catch (error) {
-            console.log(error);
             message.error(`something went wrong!,${error}`);
           }
         },
@@ -149,7 +148,6 @@ function Buy() {
     } else {
       status = false;
     }
-    console.log(value, "mode");
     values.shippingInfo = {
       name: values.fname + " " + values.lastname,
       address: values.address,
@@ -178,10 +176,6 @@ function Buy() {
     values.shippingPrice = shippingPrice;
     values.amountPayable = totalPrice;
     setUserDetails(values);
-
-    console.log(userDetails);
-
-    console.log(values);
     showModal();
   };
   if (ordercreated == true) {
@@ -194,7 +188,6 @@ function Buy() {
     dispatch(clearOrderError());
   }
   const onFinishFailed = (errorInfo) => {
-    console.log("Failed:", errorInfo);
   };
   useEffect(() => {
     dispatch(getProductDeatails(id));

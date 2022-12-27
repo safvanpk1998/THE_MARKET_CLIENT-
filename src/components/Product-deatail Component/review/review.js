@@ -1,22 +1,15 @@
 import React, { useState,useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Link,useParams } from "react-router-dom";
-import dateFormat, { masks } from "dateformat";
+import {useParams } from "react-router-dom";
+import dateFormat from "dateformat";
 
 import {
-  Menu,
   Input,
-  Space,
   Typography,
-  InputNumber,
   Button,
   Rate,
   Progress,
   message,
-  Tabs,
-  Row,
-  Col,
-  Table,
   Form,
   Avatar,
 } from "antd";
@@ -42,12 +35,10 @@ function Review() {
    
     values.rating=rating
     values.productId=id
-    console.log("Success:", values);
     dispatch(createReview(values))
 
   };
   const onFinishFailed = (errorInfo) => {
-    console.log("Failed:", errorInfo);
   };
   if (reviewAdded == true) {
     message.success("Thank You For Your Review");

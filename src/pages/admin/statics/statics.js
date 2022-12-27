@@ -4,6 +4,7 @@ function Statics() {
   return (
     <div>
       <div>
+        Coming soon...........!!
         
       </div>
 

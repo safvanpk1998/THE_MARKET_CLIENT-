@@ -1,14 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { BackTop } from 'antd';
+
 import Banner from "../banner-components/Banner";
 import Policy from "../banner-components/Policy";
 import Homeposter from "../banner-components/posters/Home-poster";
 import Header from "../layout-component/header";
-import Product from "../product-component/product";
-import ProductDetails from "../product-component/Product-Details";
 import Slider from "../slider/Slider";
-import Timer from "../timer/timer";
 import Footer from "../layout-component/footer"
 function Home() {
   return (

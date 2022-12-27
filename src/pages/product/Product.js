@@ -1,13 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
-  Typography,
-  Card,
-  Col,
-  Row,
-  Rate,
-  Badge,
-  Empty,
   Button,
   Drawer,
 } from "antd";
@@ -16,13 +9,9 @@ import { FaFilter } from "react-icons/fa";
 import Header from "../../components/layout-component/header";
 import Filter from "../filter/Filter";
 import Advertisement from "../pagebanner/ProductBanner";
-import Slider from "../../components/slider/Slider";
-
 import "./product.scss";
 import ProductCard from "./productCard";
 import Footer from "../../components/layout-component/footer";
-import { getProduct } from "../../slices/productSlice";
-import Loading from "../../components/loadin";
 
 function Product({ section }) {
   const [open, setOpen] = useState(false);
@@ -39,7 +28,6 @@ function Product({ section }) {
 
   if (section) {
     category = section;
-    console.log(category);
   }
   const showDrawer = () => {
     setOpen(true);

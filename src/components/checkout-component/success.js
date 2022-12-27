@@ -1,6 +1,6 @@
 import React ,{useEffect} from 'react'
-import { Link,useParams } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import { Button, Result } from 'antd';
 import "./success.scss";
 

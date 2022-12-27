@@ -2,11 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import {
-  Menu,
-  Input,
-  Space,
   Typography,
-  InputNumber,
   Button,
   Rate,
   Tabs,
@@ -19,11 +15,8 @@ import { MinusOutlined, PlusOutlined } from "@ant-design/icons";
 
 import { FaRupeeSign } from "react-icons/fa";
 import { GlassMagnifier, MagnifierContainer } from "react-image-magnifiers";
-import jbl from "../../assets/images/jbl.png";
 import "./basicDetails.scss";
 import Review from "./review/review";
-import Slider from "../slider/Slider";
-import { getProduct } from "../../slices/productSlice";
 import { getProductDeatails } from "../../slices/productDetailSlice";
 import {
   createNewWishList,
@@ -40,11 +33,10 @@ function BasicDetails() {
     (state) => state.productDetails
   );
   const data = productDetails.products;
-  const { wishList, loading, itemdeleted, productadded, err } = useSelector(
+  const {  loading, productadded, err } = useSelector(
     (state) => state.wishList
   );
 
-  const onChange = (value) => {};
   const [tableParams, setTableParams] = useState({
     pagination: {
       current: 1,

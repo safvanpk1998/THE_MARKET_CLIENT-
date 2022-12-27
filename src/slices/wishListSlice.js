@@ -49,7 +49,7 @@ export const getMyWishList=createAsyncThunk(
 export const deleteWishList=createAsyncThunk(
     "wishlist/delet",
     async(id)=>{
-        console.log(id)
+
     
     try{
         const response=await http.delete(`/wishlist/${id}`)

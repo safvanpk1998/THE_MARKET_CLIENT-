@@ -20,7 +20,6 @@ export const createProduct = createAsyncThunk(
   async (data, { rejectWithValue }) => {
     try {
       const response = await http.post("/admin/products/new", data);
-      console.log(data, "datataaa");
 
       return response.data;
     } catch (err) {
@@ -54,7 +53,6 @@ export const getfilterdProduct = createAsyncThunk(
   "product/getfilterdProduct",
   async (data) => {
     let price = [0, 100000];
-    console.log(data, "sub");
     if (data.amountPayable) {
       price = data.amountPayable;
       if (price[1] == 100000) {
@@ -96,7 +94,6 @@ export const createReview = createAsyncThunk(
   async (value, { rejectWithValue }) => {
     try {
       const response = await http.put("/review", value);
-      console.log(value, "datataaa");
 
       return response.data;
     } catch (err) {
@@ -159,7 +156,6 @@ const productSlice = createSlice({
     },
 
     [getProduct.rejected]: (state, action) => {
-      console.log(action.error);
       return {
         loading: false,
         error: action.error,
@@ -190,7 +186,6 @@ const productSlice = createSlice({
     },
 
     [getfilterdProduct.rejected]: (state, action) => {
-      console.log(action.error);
       return {
         loading: false,
         productLoading:false,

@@ -33,7 +33,6 @@ export const getAllProduct = createAsyncThunk(
 export const updateProduct = createAsyncThunk(
   "product/updateProduct",
   async (data) => {
-    console.log(data, "adminnn");
 
     const response = await http.put(`/admin/product/${data.id}`, data);
 
@@ -148,7 +147,6 @@ const adminSlice = createSlice({
     },
 
     [getAllProduct.rejected]: (state, action) => {
-      console.log(action.error);
       return {
         loading: false,
         error: action.error,
@@ -177,7 +175,6 @@ const adminSlice = createSlice({
     },
 
     [updateProduct.rejected]: (state, action) => {
-      console.log(action.error);
       return {
         loading: false,
         error: action.error,
@@ -205,7 +202,6 @@ const adminSlice = createSlice({
     },
 
     [deleteProduct.rejected]: (state, action) => {
-      console.log(action.error);
       return {
         loading: false,
         error: action.error,
@@ -293,7 +289,6 @@ const adminSlice = createSlice({
   },
 
   [deleteUser.rejected]: (state, action) => {
-    console.log(action.error);
     return {
       loading: false,
       error: action.error,
@@ -356,7 +351,6 @@ const adminSlice = createSlice({
     },
   
     [deleteOrder.rejected]: (state, action) => {
-      console.log(action.error);
       return {
         loading: false,
         error: action.error,

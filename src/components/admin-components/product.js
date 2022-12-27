@@ -68,7 +68,6 @@ function ProductDetails() {
   const handlePage = (current, limit) => {
     setCurrent(current);
     setLimit(limit);
-    console.log(limit, current, "current page");
     getAllProduct(current, limit);
   };
 
@@ -109,11 +108,7 @@ function ProductDetails() {
 
     setupdateProductData(data);
 
-    console.log(data, "modal");
-
     setProductModalOpen(true);
-
-    console.log(updateProductData, "afterup");
   };
 
   const registerimage = (e) => {
@@ -145,7 +140,6 @@ function ProductDetails() {
     updateSelectedproduct(productId, values);
   };
   const onFinishFailed = (errorInfo) => {
-    console.log("Failed:", errorInfo);
   };
 
   const updateSelectedproduct = async (id, data) => {
@@ -290,7 +284,6 @@ function ProductDetails() {
 
   useEffect(() => {
     getAllProduct(current, limit);
-    console.log(updateProductData);
   }, []);
 
   return (

@@ -2,21 +2,12 @@ import React, { useState,useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import {
-  Input,
   Space,
   Typography,
-  Button,
-  Row,
-  Col,
-  Form,
-  Radio,
-  Tabs,
-  Popconfirm,
   Tooltip,
   Table,
 } from "antd";
 import { Link } from "react-router-dom";
-import { FaEdit, FaEye, FaTrash } from "react-icons/fa";
 import "./cart.scss";
 import Header from "../../components/layout-component/header";
 
@@ -38,7 +29,7 @@ function Cart() {
 
   const dispatch = useDispatch();
 
-  const {order,myOrder,loading,mylist} = useSelector((state) => state.order);
+  const {myOrder,mylist} = useSelector((state) => state.order);
   if (myOrder) {
  
     // window.location.reload();

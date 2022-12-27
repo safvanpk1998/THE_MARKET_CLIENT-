@@ -1,4 +1,4 @@
-import Reac,{useEffect} from 'react'
+import React,{useEffect} from 'react'
 import { useSelector, useDispatch } from "react-redux";
 import {getProduct} from "../slices/productSlice"
 
@@ -14,7 +14,6 @@ function GetProductWithCategory(keyword) {
    }, [])
    
    dispatch(getProduct(keyword));
-   console.log(product,"insie the utils")
    let data=""
 
    if(product){

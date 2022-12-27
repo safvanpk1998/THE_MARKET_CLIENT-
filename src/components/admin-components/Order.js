@@ -1,9 +1,8 @@
-
 /**
- * 
+ *
  * author: safvan
  * discription: view and update order data
- * 
+ *
  */
 import React, { useState, useEffect } from "react";
 import {
@@ -67,9 +66,7 @@ function Order() {
 
   //form submission error
 
-  const onFinishFailed = (errorInfo) => {
-    console.log("Failed:", errorInfo);
-  };
+  const onFinishFailed = (errorInfo) => {};
 
   //delivry status updation
 
@@ -100,7 +97,6 @@ function Order() {
   //delivery status model open
 
   const showstatusModal = (data) => {
-    console.log(data);
     setorder(data);
     setStatusModalOpen(true);
   };
@@ -115,7 +111,6 @@ function Order() {
   const handlePage = (current, limit) => {
     setCurrent(current);
     setLimit(limit);
-    console.log(limit, current, "current page");
     getAllOrder(current, limit);
   };
 
@@ -219,7 +214,6 @@ function Order() {
   ];
   const getAllOrder = async (current, limit) => {
     const response = await getAllOrderDatas(current, limit);
-    console.log(response, "cdeug");
     if (response.error) {
       setStatusModalOpen(false);
       message.error("Something went wrong");

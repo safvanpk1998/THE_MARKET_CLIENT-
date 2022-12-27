@@ -3,24 +3,17 @@ import {
   useNavigate,
   useLocation,
   useParams,
-  useSearchParams,
 } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import qs from "qs";
 import "./filter.scss";
 import {
   Typography,
-  Card,
-  Col,
-  Row,
   Rate,
-  Cascader,
   Select,
-  Tag,
   Slider,
 } from "antd";
-import Header from "../../components/layout-component/header";
 import { getfilterdProduct } from "../../slices/productSlice";
 const { Title } = Typography;
 
@@ -103,7 +96,6 @@ const Offer = [
 function Filter() {
   
   let { keyword,soldBy} = useParams()
-  console.log(soldBy,"keee")
   const dispatch = useDispatch();
   const location = useLocation();
   const navigate = useNavigate();
@@ -112,14 +104,14 @@ function Filter() {
   const [rating, setRating] = useState(0);
 
 
-  const params = new URLSearchParams(location.search);
+
 
   const [subCategory, setSubCategory] = useState(" ");
   const [offer, setOffer] = useState(0);
   const [price, setPrice] = useState();
 
   const [brand, setBrand] = useState(" ");
-  const [amountPayable, setAmountPayable] = useState([0, 25000]);
+
   const priceHandler = (value) => {};
 
   const SelctCategory = (value, param) => {
@@ -167,10 +159,6 @@ function Filter() {
   
   
 
-  const onChange = (value) => {
-    console.log("onChange: ", value);
-  };
-
   useEffect(() => {
 
   
@@ -186,8 +174,7 @@ function Filter() {
       amountPayable: price,
       ratings:rating
     };
-    console.log(typeof section, "euiwu");
-    console.log(data, "cbewugfy");
+
     dispatch(getfilterdProduct(data));
   }, [subCategory, brand, pathname, offer, price, category,rating]);
 

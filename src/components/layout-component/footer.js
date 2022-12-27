@@ -1,19 +1,9 @@
 import React from "react";
-import { useParams, Link } from "react-router-dom";
-import { Typography, Card, Col, Row, Rate, Input, Button,BackTop } from "antd";
+import { Link } from "react-router-dom";
+import { Typography,Input, Button,BackTop } from "antd";
 import { FaFacebookF,FaInstagramSquare,FaTwitter,FaLinkedin,FaGooglePlusSquare } from "react-icons/fa";
 import "./footer.scss";
 const { Title } = Typography;
-const style = {
-  height: 40,
-  width: 40,
-  lineHeight: '40px',
-  borderRadius: 4,
-  backgroundColor: '#1088e9',
-  color: '#fff',
-  textAlign: 'center',
-  fontSize: 14,
-};
 function Footer() {
   return (
     <footer className="footer">

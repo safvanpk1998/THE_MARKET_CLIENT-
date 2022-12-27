@@ -1,29 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
-  Menu,
   Input,
-  Space,
   Typography,
   Select,
-  Badge,
-  Tag,
   Modal,
-  Popover,
   message,
   Button,
   Form,
-  Upload,
   InputNumber,
 } from "antd";
 import { PlusOutlined, MinusCircleOutlined } from "@ant-design/icons";
 import "./action.scss";
 import Header from "../../../components/layout-component/header";
-import Trophy from "../../../assets/others/trophy.png";
-import Ico from "../../../assets/others/graph.jpg";
 import graph1 from "../../../assets/others/graph3.png";
-import graph2 from "../../../assets/others/graph4.png";
-import graph3 from "../../../assets/others/graph6.png";
 import { createProduct } from "../../../slices/productSlice";
 import { createNewStocker, getStockers } from "../../../utils/adminApi";
 const { Title } = Typography;
@@ -36,8 +26,6 @@ function Actions() {
   const [traders, setTraders] = useState([]);
   const [spinning, setSpinning] = useState(false);
   const [avatar, setAvatar] = useState();
-
-  const [image, setImage] = useState(false);
   const [loading, setLoading] = useState(false);
   const [form] = Form.useForm();
   const products = useSelector((state) => state.products);
@@ -66,7 +54,6 @@ function Actions() {
     setstockeropen(false);
   };
   const addNewStocker = async (value) => {
-    console.log(value, "stocker");
     const stocker = await createNewStocker(value);
     setSpinning(true);
     if (stocker.error) {
@@ -101,11 +88,7 @@ function Actions() {
   const addNewProduct = (values) => {
     const productData = values;
     values.image = avatar;
-    console.log(products.loading, "loading ...");
-    console.log(productData);
     dispatch(createProduct(productData));
-
-    console.log(products.loading, "loading ...");
     setLoading(products.loading);
 
     setTimeout(() => {
@@ -115,11 +98,8 @@ function Actions() {
         message.success("Product Added Successfully");
       }
     }, 3000);
-
-    console.log("Success:", values);
   };
   const onFinishFailed = (errorInfo) => {
-    console.log("Failed:", errorInfo);
   };
 
   const registerimage = (e) => {
@@ -134,14 +114,6 @@ function Actions() {
     reader.readAsDataURL(e.target.files[0]);
   };
 
-  // const getFile = (e) => {
-  //   console.log("Upload event:", e);
-
-  //   if (Array.isArray(e)) {
-  //     return e;
-  //   }
-  //   return e && e.fileList;
-  // };
   useEffect(() => {}, [dispatch]);
   return (
     <>

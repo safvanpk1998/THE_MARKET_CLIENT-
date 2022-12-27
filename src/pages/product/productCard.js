@@ -1,14 +1,8 @@
-import React, { useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
-import { Typography, Card, Col, Row, Rate ,Badge,Empty,Result,Button } from "antd";
-import Countdown from "react-countdown";
-import { ScrollMenu } from "react-horizontal-scrolling-menu";
+import React from "react";
+import { Link } from "react-router-dom";
+import { Typography, Card, Col, Rate ,Badge,Result,Button } from "antd";
 import { FaRupeeSign } from "react-icons/fa";
 import "./productCard.scss";
-import speaker from "../../assets/images/speaker.png";
-import kitchen from "../../assets/images/kitchen.png";
-import jbl from "../../assets/images/jbl.png";
-import toy from "../../assets/images/toy.png";
 import Loading from "../../components/loadin";
 const { Title } = Typography;
 

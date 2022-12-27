@@ -2,10 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { Input, Typography, InputNumber, Button, message, Form } from "antd";
-import { LockOutlined, UserOutlined, MailOutlined } from "@ant-design/icons";
+import { LockOutlined, MailOutlined } from "@ant-design/icons";
 import {
   loginUser,
-  loadUser,
   getPasswordResettingOtp,
   postConfirmOtp,
   postResetPassword,
@@ -19,7 +18,7 @@ const { Title } = Typography;
 function Auth() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { loading, loginError, user, isAuthenticated, reset } = useSelector(
+  const { loginError, isAuthenticated, reset } = useSelector(
     (state) => state.user
   );
 
@@ -33,7 +32,6 @@ function Auth() {
     let data = {
       ...values,
     };
-    console.log(data);
     if (data) {
       dispatch(loginUser(data));
     }

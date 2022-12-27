@@ -3,17 +3,10 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { createUser, clearAuthError } from "../../slices/authSlice";
 import {
-  Menu,
   Input,
-  Space,
   Typography,
   message,
-  InputNumber,
   Button,
-  Rate,
-  Tabs,
-  Table,
-  Checkbox,
   Form,
 } from "antd";
 import { LockOutlined, UserOutlined, MailOutlined } from "@ant-design/icons";
@@ -27,7 +20,7 @@ const { Title } = Typography;
 // const data = products.products;
 
 function CreateAccount() {
-  const { loading, loginError, user, isAuthenticated } = useSelector(
+  const { loginError, isAuthenticated } = useSelector(
     (state) => state.user
   );
   const navigate = useNavigate();
@@ -54,7 +47,6 @@ function CreateAccount() {
         url: "sampleurl",
       },
     };
-    console.log(data);
     if (data) {
       dispatch(createUser(data));
     }

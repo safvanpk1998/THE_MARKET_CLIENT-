@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate, Navigate, BrowserRouter } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { CookiesProvider } from 'react-cookie';
-import { useCookies } from 'react-cookie';
 import { loadUser, logoutUser, clearAuthError } from "../../slices/authSlice";
 import "@fontsource/signika";
 import "./header.scss";
@@ -10,7 +8,6 @@ import {
   Menu,
   Input,
   Space,
-  Typography,
   Button,
   Drawer,
   Select,
@@ -19,15 +16,10 @@ import {
   message,
   Dropdown,
   Divider,
-  Tag,
-  Popover,
-  Avatar,
   Collapse,
 } from "antd";
 import {
-  UserOutlined,
-  SmileOutlined,
-  DownOutlined,
+
   MenuOutlined,
   LogoutOutlined,
 } from "@ant-design/icons";
@@ -35,7 +27,6 @@ import {
 import {
   FaShoppingCart,
   FaShoppingBag,
-  FaUserCircle,
   FaPhoneAlt,
   FaHome,
   FaAddressCard,
@@ -46,27 +37,23 @@ import {
   FaUserShield,
   FaBox,
   FaCogs,
-  FaCookie,
 } from "react-icons/fa";
 import phone from "../../assets/others/images.jpg";
 import electronics from "../../assets/others/laptop.jpg";
 import books from "../../assets/others/books.png";
 import appliences from "../../assets/others/applinces.png";
-import seller from "../../assets/others/seller.png";
 import best from "../../assets/others/best.png";
 
 import "antd/dist/antd.min.css";
-import { getProduct } from "../../slices/productSlice";
 import { getStockers } from "../../utils/adminApi";
 const { Search } = Input;
 const { Option } = Select;
-const { Panel } = Collapse;
 const { Footer } = Layout;
 
 function Header() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { loading, error, user, isAuthenticated, Wishlistcount, ordercount } =
+  const {user, isAuthenticated, Wishlistcount, ordercount } =
     useSelector((state) => state.user);
 
   const [Language, Setlanguage] = useState(0);
@@ -88,7 +75,6 @@ function Header() {
   };
   window.addEventListener("scroll", setFixed);
   const selectStocker = (value) => {
-    console.log(value.key, "stoker");
     navigate(`/product/${value.key}`);
   };
   const showDrawer = () => {
@@ -106,10 +92,8 @@ function Header() {
 
   const onChange = (value) => {
     navigate(`/product/${value}`);
-    console.log(`selected ${value}`);
   };
   const searchStocker = (value) => {
-    console.log("search:", value);
   };
 
   const handleCurrency = (value) => {

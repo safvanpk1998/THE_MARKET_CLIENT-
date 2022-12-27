@@ -1,23 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Link, useParams } from "react-router-dom";
-import { MinusOutlined, PlusOutlined } from "@ant-design/icons";
-
+import { Link } from "react-router-dom";
 import {
   message,
   Typography,
-  Empty,
   Button,
   Rate,
   Popconfirm,
-  Tooltip,
 } from "antd";
-import { FaTrash, FaArrowCircleRight } from "react-icons/fa";
+import { FaTrash } from "react-icons/fa";
 import Header from "../../components/layout-component/header";
-import { getSingleOrder, updateOrders } from "../../slices/orderSlice";
 import "./wishList.scss";
 import Footer from "../../components/layout-component/footer";
-import jbl from "../../assets/images/jbl.png";
 import {
   clearWishListError,
   deleteWishList,
@@ -26,17 +20,14 @@ import {
 
 function Wishlist() {
   const dispatch = useDispatch();
-  const description = "This is a description.";
 
-  const { id } = useParams();
   const { Title } = Typography;
 
-  const { wishList, loading, itemdeleted } = useSelector(
+  const { wishList, itemdeleted } = useSelector(
     (state) => state.wishList
   );
   const product = wishList.order;
 
-  let deleted = false;
 
   if (itemdeleted == "deleted") {
     message.warning("Order cancelled");

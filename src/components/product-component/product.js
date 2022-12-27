@@ -1,9 +1,8 @@
 import React, { useEffect } from "react";
 
 import { Link } from "react-router-dom";
-import { ReactStars } from "react-star-rating-component";
 import { useSelector, useDispatch } from "react-redux";
-import { Button, Checkbox, Form, Input } from "antd";
+import { Button, Form, Input } from "antd";
 import {
   createProduct,
   getProduct,

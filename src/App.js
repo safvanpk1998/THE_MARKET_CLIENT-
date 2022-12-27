@@ -1,5 +1,4 @@
-import React, { Component, useEffect } from "react";
-import Header from "./components/layout-component/header";
+import React, { useEffect } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import "@fontsource/signika"; // Defaults to weight 400.
@@ -7,7 +6,6 @@ import "@fontsource/signika"; // Defaults to weight 400.
 import { loadUser } from "./slices/authSlice";
 import "./App.css";
 import Home from "./components/home-component/Home";
-import Footer from "./components/layout-component/footer";
 
 import ProductDetails from "./pages/productDetailPage/productDetail";
 //import ProductDetails from "./components/product-component/Product-Details"
@@ -19,16 +17,13 @@ import Auth from "./pages/authentication/auth";
 import CreateAccount from "./pages/authentication/register";
 import Admin from "./pages/admin/admin";
 import Actions from "./pages/admin/Actions/Actions";
-import ProductAdd from "./components/product-component/product";
 import ProtectedRoute from "./components/ProtectedRoute";
-import ScrollToTop from "./utils/scroll";
 import Success from "./components/checkout-component/success";
 import ViewProduct from "./pages/cart/viewProduct";
 import Wishlist from "./pages/wishList/wishlist";
 
 function App() {
   const dispatch = useDispatch();
-  const user = useSelector((state) => state.user);
   useEffect(() => {
     dispatch(loadUser());
   }, [dispatch]);
