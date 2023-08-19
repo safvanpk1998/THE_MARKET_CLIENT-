@@ -41,14 +41,12 @@ function App() {
         {/* <Route exact path="/zzz" element={<ProductAdd></ProductAdd>}></Route> */}
 
         <Route exact path="/" element={<Home />}></Route>
-        <Route  path="/login" element={<Auth></Auth>}></Route>
+        <Route path="/login" element={<Auth></Auth>}></Route>
         <Route
-          
           path="/createaccount"
           element={<CreateAccount></CreateAccount>}
         ></Route>
         <Route
-          
           path="/electronics"
           element={<Product category={"Electronics"} />}
         ></Route>
@@ -73,16 +71,8 @@ function App() {
           path="/bestSellers"
           element={<Product category={"bestSellers"} />}
         ></Route>
-         <Route
-          exact
-          path="/:keyword"
-          element={<Product/>}
-        ></Route>
-         <Route
-          exact
-          path="/product/:soldBy"
-          element={<Product/>}
-        ></Route>
+        <Route exact path="/:keyword" element={<Product />}></Route>
+        <Route exact path="/product/:soldBy" element={<Product />}></Route>
         <Route
           exact
           path="/productDetails/:id"
@@ -94,10 +84,14 @@ function App() {
           element={<Checkout></Checkout>}
         ></Route>
         <Route exact path="/cart" element={<Cart></Cart>}></Route>
-        <Route exact path="/cart/:id" element={<ViewProduct></ViewProduct>}></Route>
+        <Route
+          exact
+          path="/cart/:id"
+          element={<ViewProduct></ViewProduct>}
+        ></Route>
         <Route exact path="/wishList" element={<Wishlist></Wishlist>}></Route>
         <Route exact path="/success/:id" element={<Success></Success>}></Route>
-       
+
         <Route
           element={<ProtectedRoute allowedRoles={["admin"]}></ProtectedRoute>}
         >
@@ -107,7 +101,7 @@ function App() {
             Admin={true}
             element={<Actions></Actions>}
           ></Route>
-           <Route exact path="/admin" element={<Admin></Admin>}></Route>
+          <Route exact path="/admin" element={<Admin></Admin>}></Route>
         </Route>
       </Routes>
       {/* //</ScrollToTop> */}
