@@ -27,7 +27,7 @@ function Banner() {
         <div className="carousel">
           <div className="ad-text">
             <div className="offer">
-              <p>Mega Sale nov 2022</p>
+              <p>Mega Sale nov 2023</p>
             </div>
             <Title level={2}>
               Double combo with <br></br> the music
@@ -54,7 +54,7 @@ function Banner() {
         <div className="carousel">
           <div className="ad-text">
             <div className="offer">
-              <p>Mega Sale nov 2022</p>
+              <p>Mega Sale nov 2023</p>
             </div>
             <Title level={2}>
               Next-Gen Kitchen <br></br> Appliances
@@ -80,7 +80,7 @@ function Banner() {
         <div className="carousel">
           <div className="ad-text">
             <div className="offer">
-              <p>Mega Sale nov 2022</p>
+              <p>Mega Sale nov 2023</p>
             </div>
             <Title level={2}>
               Put The World <br></br>On Mute
@@ -106,7 +106,7 @@ function Banner() {
         <div className="carousel">
           <div className="ad-text">
             <div className="offer">
-              <p>Mega Sale nov 2022</p>
+              <p>Mega Sale nov 2023</p>
             </div>
             <Title level={2}>
               Let's paly Anytime <br></br> Anywhere

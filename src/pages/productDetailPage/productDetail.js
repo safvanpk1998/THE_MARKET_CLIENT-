@@ -9,8 +9,8 @@ function productDetail() {
     <div>
         <Header></Header>
         <BasicDetails></BasicDetails>
-        <Slider></Slider>
-        <Slider></Slider>
+        <Slider keyword={`offer[gte]=31&offer[lte]=75&ratings[gte]=0`}></Slider>
+        <Slider keyword={`offer[gte]=0&offer[lte]=30&ratings[gte]=0`}></Slider>
         <Footer></Footer>
 
        

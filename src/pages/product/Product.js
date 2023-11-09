@@ -61,9 +61,7 @@ function Product({ section }) {
       <Header></Header>
 
       <>
-        {productLoading ? (
-         <Loading></Loading>
-        ) : (
+       
           <div className="pages">
             <div className="filter-withscreen">
               <Filter category={category}></Filter>
@@ -84,7 +82,7 @@ function Product({ section }) {
               loading={productLoading}
             ></ProductCard>
           </div>
-        )}
+      
       </>
       <Footer></Footer>
 

@@ -61,10 +61,6 @@ function BasicDetails() {
 
     dispatch(clearWishListError());
   }
-  // if (err) {
-  //   message.error("something went wrong! please try again");
-  // }
-
   const addtoWishList = () => {
     dispatch(createNewWishList(id));
   };
@@ -125,9 +121,9 @@ function BasicDetails() {
 
   return (
     <>
-      {loading ? (
+      {/* {loading ? (
         <Loading></Loading>
-      ) : (
+      ) : ( */}
         <div className="BasicDetails">
           {productDetails && data ? (
             <div className="header">
@@ -390,7 +386,7 @@ function BasicDetails() {
           </div>
           <div></div>
         </div>
-      )}
+
     </>
   );
 }
